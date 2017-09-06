@@ -1,0 +1,2740 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="SyteLine">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>=Parameters!pConnectionString.Value</ConnectString>
+        <Prompt>
+        </Prompt>
+      </ConnectionProperties>
+      <rd:SecurityType>DataBase</rd:SecurityType>
+      <rd:DataSourceID>ba348b54-8ca7-429f-8c86-dd9e59ad250f</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="APCheckLaser">
+      <Query>
+        <DataSourceName>SyteLine</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@PSessionIDChar">
+            <Value>=Parameters!PSessionIDChar.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@PPayType">
+            <Value>=Parameters!PPayType.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@PDistDetail">
+            <Value>=Parameters!PDistDetail.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@PPayDateStarting">
+            <Value>=Parameters!PPayDateStarting.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@PPayDateEnding">
+            <Value>=Parameters!PPayDateEnding.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@TaskId">
+            <Value>=Parameters!TaskId.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@PrintAPCheckStubs">
+            <Value>=Parameters!PrintAPCheckStubs.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@PFormType">
+            <Value>=Parameters!PFormType.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@pSite">
+            <Value>=Parameters!BG_SITEID.Value</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+          <QueryParameter Name="@BGUser">
+            <Value>=Parameters!BG_USERID.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>Rpt_Ap01FRISp</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="LineNumber">
+          <DataField>LineNumber</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="AppmtVendNum">
+          <DataField>AppmtVendNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AppmtCheckNum">
+          <DataField>AppmtCheckNum</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="AppmtCheckDate">
+          <DataField>AppmtCheckDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="AppmtdVoucher">
+          <DataField>AppmtdVoucher</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TInvNum">
+          <DataField>TInvNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TInvNum2">
+          <DataField>TInvNum2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TInvDate">
+          <DataField>TInvDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="TcAmtAdj">
+          <DataField>TcAmtAdj</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TcAmtPaid">
+          <DataField>TcAmtPaid</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TcAmtAmtPaid">
+          <DataField>TcAmtAmtPaid</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TcAmtDisc">
+          <DataField>TcAmtDisc</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TcAmtCheck">
+          <DataField>TcAmtCheck</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TCheckAmt">
+          <DataField>TCheckAmt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TSymbolRight">
+          <DataField>TSymbolRight</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Addr1">
+          <DataField>Addr1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Addr2">
+          <DataField>Addr2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Addr3">
+          <DataField>Addr3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Addr4">
+          <DataField>Addr4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Addr5">
+          <DataField>Addr5</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Addr6">
+          <DataField>Addr6</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Addr7">
+          <DataField>Addr7</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DomCurrencyFormat">
+          <DataField>DomCurrencyFormat</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DomCurrencyPlaces">
+          <DataField>DomCurrencyPlaces</DataField>
+          <rd:TypeName>System.Byte</rd:TypeName>
+        </Field>
+        <Field Name="TotalCurrencyFormat">
+          <DataField>TotalCurrencyFormat</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TotalCurrencyPlaces">
+          <DataField>TotalCurrencyPlaces</DataField>
+          <rd:TypeName>System.Byte</rd:TypeName>
+        </Field>
+        <Field Name="AppmtDueDate">
+          <DataField>AppmtDueDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="AppmtDomCheckAmt">
+          <DataField>AppmtDomCheckAmt</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="AppmtForCheckAmt">
+          <DataField>AppmtForCheckAmt</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TBankNumber">
+          <DataField>TBankNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TBranchCode">
+          <DataField>TBranchCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TBankAcctNo1">
+          <DataField>TBankAcctNo1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TBankAcctNo2">
+          <DataField>TBankAcctNo2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TBankAddr1">
+          <DataField>TBankAddr1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TBankAddr2">
+          <DataField>TBankAddr2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VendaddrName">
+          <DataField>VendaddrName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VendaddrAddr__1">
+          <DataField>VendaddrAddr##1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VendaddrAddr__2">
+          <DataField>VendaddrAddr##2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VendaddrZip">
+          <DataField>VendaddrZip</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VendaddrCity">
+          <DataField>VendaddrCity</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ParmsCompany">
+          <DataField>ParmsCompany</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ParmsAddr__1">
+          <DataField>ParmsAddr##1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ParmsZip">
+          <DataField>ParmsZip</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ParmsCity">
+          <DataField>ParmsCity</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CurrencyDescription">
+          <DataField>CurrencyDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PaymentCheckAmount">
+          <DataField>PaymentCheckAmount</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="BankHdrCurrCode">
+          <DataField>BankHdrCurrCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PaymentExchRate">
+          <DataField>PaymentExchRate</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="DomCurrCode">
+          <DataField>DomCurrCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VendorCurrCode">
+          <DataField>VendorCurrCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IndicatorText">
+          <DataField>IndicatorText</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PageNum">
+          <DataField>PageNum</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="Tablix1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>1.10936in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.39731in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.95647in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.17168in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.22168in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.94127in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.19805in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="AppmtVendNum">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!AppmtVendNum.Value</Value>
+                                  <Style>
+                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>Silver</BackgroundColor>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="AppmtCheckNum">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!AppmtCheckNum.Value</Value>
+                                  <Style>
+                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>Silver</BackgroundColor>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox38">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox38</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>Silver</BackgroundColor>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox39">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox39</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>Silver</BackgroundColor>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox40">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox40</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>Silver</BackgroundColor>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox43">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox43</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>Silver</BackgroundColor>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.42578in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Rectangle Name="Rectangle3">
+                          <ReportItems>
+                            <Textbox Name="TextBox233">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value EvaluationMode="Constant" />
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <Height>0.2in</Height>
+                              <Width>1.2016in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>White</BackgroundColor>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox24">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value />
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox24</rd:DefaultName>
+                              <Left>1.24326in</Left>
+                              <Height>0.2in</Height>
+                              <Width>1.49493in</Width>
+                              <ZIndex>1</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox27">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Parameters!sPaymentExchRate.Value</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>:</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Right</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox14</rd:DefaultName>
+                              <Top>0.2in</Top>
+                              <Left>0.02778in</Left>
+                              <Height>0.171in</Height>
+                              <Width>1.2016in</Width>
+                              <ZIndex>2</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox28">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!PaymentExchRate.Value</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                        <Format>n3</Format>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Right</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox24</rd:DefaultName>
+                              <Top>0.2in</Top>
+                              <Left>1.22938in</Left>
+                              <Height>0.171in</Height>
+                              <Width>1.49493in</Width>
+                              <ZIndex>3</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox29">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Parameters!sCurrency.Value</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>:</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox15</rd:DefaultName>
+                              <Top>0.2in</Top>
+                              <Left>2.72778in</Left>
+                              <Height>0.171in</Height>
+                              <Width>0.99999in</Width>
+                              <ZIndex>4</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox30">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!BankHdrCurrCode.Value</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox19</rd:DefaultName>
+                              <Top>0.2in</Top>
+                              <Left>3.74299in</Left>
+                              <Height>0.171in</Height>
+                              <Width>1.2452in</Width>
+                              <ZIndex>5</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox32">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Parameters!sCheckAmt.Value</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>:</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Right</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox23</rd:DefaultName>
+                              <Top>0.2in</Top>
+                              <Left>4.99459in</Left>
+                              <Height>0.171in</Height>
+                              <Width>1.2936in</Width>
+                              <ZIndex>6</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="TcAmtCheck">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Format( Round( IIf( IsNothing( Fields!PaymentCheckAmount.Value ), 0, Fields!PaymentCheckAmount.Value ), Fields!DomCurrencyPlaces.Value ), Fields!DomCurrencyFormat.Value )</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Right</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.2in</Top>
+                              <Left>6.28819in</Left>
+                              <Height>0.171in</Height>
+                              <Width>1.50958in</Width>
+                              <ZIndex>7</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Textbox>
+                          </ReportItems>
+                          <KeepTogether>true</KeepTogether>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Rectangle>
+                        <ColSpan>6</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>3.5in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Rectangle Name="Rectangle5">
+                          <ReportItems>
+                            <Subreport Name="Subreport2">
+                              <ReportName>SubAPChecks3PartLaser</ReportName>
+                              <Parameters>
+                                <Parameter Name="PDistDetail">
+                                  <Value>=Parameters!PDistDetail.Value</Value>
+                                </Parameter>
+                                <Parameter Name="pLanguage">
+                                  <Value>=Parameters!pLanguage.Value</Value>
+                                </Parameter>
+                                <Parameter Name="pFontDescriptor">
+                                  <Value>=Parameters!pFontDescriptor.Value</Value>
+                                </Parameter>
+                                <Parameter Name="pCheckNum">
+                                  <Value>=Fields!AppmtCheckNum.Value</Value>
+                                </Parameter>
+                                <Parameter Name="pVendNum">
+                                  <Value>=Fields!AppmtVendNum.Value</Value>
+                                </Parameter>
+                                <Parameter Name="pPageNum">
+                                  <Value>=Fields!PageNum.Value</Value>
+                                </Parameter>
+                                <Parameter Name="pIsGroupEnd">
+                                  <Value>=ReportItems!IsGroupEnd.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sAmountPaid">
+                                  <Value>=Parameters!sAmountPaid.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sCheck">
+                                  <Value>=Parameters!sCheck.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sCheckAmount">
+                                  <Value>=Parameters!sCheckAmount.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sCheckAmt">
+                                  <Value>=Parameters!sCheckAmt.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sContinued">
+                                  <Value>=Parameters!sContinued.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sDiscountTaken">
+                                  <Value>=Parameters!sDiscountTaken.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sInvoiceAmount">
+                                  <Value>=Parameters!sInvoiceAmount.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sInvoiceDate">
+                                  <Value>=Parameters!sInvoiceDate.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sNetCheckAmount">
+                                  <Value>=Parameters!sNetCheckAmount.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sOurReferenceNumber">
+                                  <Value>=Parameters!sOurReferenceNumber.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sPaytotheOrderof">
+                                  <Value>=Parameters!sPaytotheOrderof.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sVendor">
+                                  <Value>=Parameters!sVendor.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sVoid">
+                                  <Value>=Parameters!sVendor.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sYourInvoice">
+                                  <Value>=Parameters!sYourInvoice.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sDateCaps">
+                                  <Value>=Parameters!sDateCaps.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sCurrency">
+                                  <Value>=Parameters!sCurrency.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sPaymentExchRate">
+                                  <Value>=Parameters!sPaymentExchRate.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sTotalAmount">
+                                  <Value>=Parameters!sTotalAmount.Value</Value>
+                                </Parameter>
+                                <Parameter Name="pConnectionString">
+                                  <Value>=Parameters!pConnectionString.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sCheckDate">
+                                  <Value>=Parameters!sCheckDate.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sPaymentAmt">
+                                  <Value>=Parameters!sPaymentAmt.Value</Value>
+                                </Parameter>
+                              </Parameters>
+                              <OmitBorderOnPageBreak>true</OmitBorderOnPageBreak>
+                              <Height>3.5in</Height>
+                              <Width>7.77in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <Color>White</Color>
+                              </Style>
+                            </Subreport>
+                          </ReportItems>
+                          <KeepTogether>true</KeepTogether>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Rectangle>
+                        <ColSpan>6</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.39649in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Rectangle Name="Rectangle4">
+                          <ReportItems>
+                            <Textbox Name="Addr1">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=First(Fields!Addr1.Value, "Group1")</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.00615in</Top>
+                              <Left>0.06284in</Left>
+                              <Height>0.156in</Height>
+                              <Width>0.84158in</Width>
+                              <Visibility>
+                                <Hidden>true</Hidden>
+                              </Visibility>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>Silver</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="TCheckAmt">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=CStr(Left (CStr(First(Fields!TCheckAmt.Value, "Group1")),Len (CStr(First(Fields!TCheckAmt.Value, "Group1")))-3 ))</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.17604in</Top>
+                              <Left>0.06284in</Left>
+                              <Height>0.156in</Height>
+                              <Width>1in</Width>
+                              <ZIndex>1</ZIndex>
+                              <Visibility>
+                                <Hidden>true</Hidden>
+                              </Visibility>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>Silver</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Addr2">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=First(Fields!Addr2.Value, "Group1")</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.00615in</Top>
+                              <Left>1.06284in</Left>
+                              <Height>0.156in</Height>
+                              <Width>1in</Width>
+                              <ZIndex>2</ZIndex>
+                              <Visibility>
+                                <Hidden>true</Hidden>
+                              </Visibility>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>Silver</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="TSymbolRight">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=First(Fields!TSymbolRight.Value, "Group1")</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.17604in</Top>
+                              <Left>1.06284in</Left>
+                              <Height>0.156in</Height>
+                              <Width>1in</Width>
+                              <ZIndex>3</ZIndex>
+                              <Visibility>
+                                <Hidden>true</Hidden>
+                              </Visibility>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>Silver</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Addr3">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=First(Fields!Addr3.Value, "Group1")</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.00615in</Top>
+                              <Left>1.68437in</Left>
+                              <Height>0.156in</Height>
+                              <Width>1in</Width>
+                              <ZIndex>4</ZIndex>
+                              <Visibility>
+                                <Hidden>true</Hidden>
+                              </Visibility>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>Silver</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="AppmtCheckDate">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!AppmtCheckDate.Value</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                        <Format>d</Format>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.44713cm</Top>
+                              <Left>5.35425cm</Left>
+                              <Height>0.156in</Height>
+                              <Width>1in</Width>
+                              <ZIndex>5</ZIndex>
+                              <Visibility>
+                                <Hidden>true</Hidden>
+                              </Visibility>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>Silver</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Addr4">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=First(Fields!Addr4.Value, "Group1")</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.00615in</Top>
+                              <Left>2.44131in</Left>
+                              <Height>0.156in</Height>
+                              <Width>1in</Width>
+                              <ZIndex>6</ZIndex>
+                              <Visibility>
+                                <Hidden>true</Hidden>
+                              </Visibility>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>Silver</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="CurrencyDescription">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=First(Fields!CurrencyDescription.Value, "Group1")</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.17604in</Top>
+                              <Left>3.27423in</Left>
+                              <Height>0.156in</Height>
+                              <Width>1in</Width>
+                              <ZIndex>7</ZIndex>
+                              <Visibility>
+                                <Hidden>true</Hidden>
+                              </Visibility>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>Silver</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Addr5">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=First(Fields!Addr5.Value, "Group1")</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.00615in</Top>
+                              <Left>3.49686in</Left>
+                              <Height>0.156in</Height>
+                              <Width>1in</Width>
+                              <ZIndex>8</ZIndex>
+                              <Visibility>
+                                <Hidden>true</Hidden>
+                              </Visibility>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>Silver</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Addr6">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=First(Fields!Addr6.Value, "Group1")</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.00615in</Top>
+                              <Left>4.55589in</Left>
+                              <Height>0.156in</Height>
+                              <Width>1in</Width>
+                              <ZIndex>9</ZIndex>
+                              <Visibility>
+                                <Hidden>true</Hidden>
+                              </Visibility>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>Silver</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Addr7">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=First(Fields!Addr7.Value, "Group1")</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.17604in</Top>
+                              <Left>4.33325in</Left>
+                              <Height>0.156in</Height>
+                              <Width>1in</Width>
+                              <ZIndex>10</ZIndex>
+                              <Visibility>
+                                <Hidden>true</Hidden>
+                              </Visibility>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>Silver</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="IsGroupEnd">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=RowNumber("Group1") = CountRows("Group1")</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.00615in</Top>
+                              <Left>5.71867in</Left>
+                              <Height>0.156in</Height>
+                              <Width>1in</Width>
+                              <ZIndex>11</ZIndex>
+                              <Visibility>
+                                <Hidden>true</Hidden>
+                              </Visibility>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>Silver</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="AppmtVendNum2">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!AppmtVendNum.Value</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.17604in</Top>
+                              <Left>5.4027in</Left>
+                              <Height>0.156in</Height>
+                              <Width>1in</Width>
+                              <ZIndex>12</ZIndex>
+                              <Visibility>
+                                <Hidden>true</Hidden>
+                              </Visibility>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>Silver</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Textbox45">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!AppmtVendNum.Value</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Textbox45</rd:DefaultName>
+                              <Top>0.00615in</Top>
+                              <Left>6.77in</Left>
+                              <Height>0.156in</Height>
+                              <Width>1in</Width>
+                              <ZIndex>13</ZIndex>
+                              <Visibility>
+                                <Hidden>true</Hidden>
+                              </Visibility>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>Silver</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="AppmtCheckNum2">
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=First(Fields!AppmtCheckNum.Value, "Group1")</Value>
+                                      <Style>
+                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.17604in</Top>
+                              <Left>6.56159in</Left>
+                              <Height>0.156in</Height>
+                              <Width>1in</Width>
+                              <ZIndex>14</ZIndex>
+                              <Visibility>
+                                <Hidden>true</Hidden>
+                              </Visibility>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>Silver</BackgroundColor>
+                              </Style>
+                            </Textbox>
+                          </ReportItems>
+                          <KeepTogether>true</KeepTogether>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Rectangle>
+                        <ColSpan>6</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>3.5in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Rectangle Name="Rectangle6">
+                          <ReportItems>
+                            <Subreport Name="Subreport">
+                              <ReportName>SubAPChecks3PartLaser</ReportName>
+                              <Parameters>
+                                <Parameter Name="PDistDetail">
+                                  <Value>=Parameters!PDistDetail.Value</Value>
+                                </Parameter>
+                                <Parameter Name="pLanguage">
+                                  <Value>=Parameters!pLanguage.Value</Value>
+                                </Parameter>
+                                <Parameter Name="pFontDescriptor">
+                                  <Value>=Parameters!pFontDescriptor.Value</Value>
+                                </Parameter>
+                                <Parameter Name="pCheckNum">
+                                  <Value>=Fields!AppmtCheckNum.Value</Value>
+                                </Parameter>
+                                <Parameter Name="pVendNum">
+                                  <Value>=Fields!AppmtVendNum.Value</Value>
+                                </Parameter>
+                                <Parameter Name="pPageNum">
+                                  <Value>=Fields!PageNum.Value</Value>
+                                </Parameter>
+                                <Parameter Name="pIsGroupEnd">
+                                  <Value>=ReportItems!IsGroupEnd.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sAmountPaid">
+                                  <Value>=Parameters!sAmountPaid.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sCheck">
+                                  <Value>=Parameters!sCheck.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sCheckAmount">
+                                  <Value>=Parameters!sCheckAmount.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sCheckAmt">
+                                  <Value>=Parameters!sCheckAmt.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sContinued">
+                                  <Value>=Parameters!sContinued.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sDiscountTaken">
+                                  <Value>=Parameters!sDiscountTaken.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sInvoiceAmount">
+                                  <Value>=Parameters!sInvoiceAmount.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sInvoiceDate">
+                                  <Value>=Parameters!sInvoiceDate.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sNetCheckAmount">
+                                  <Value>=Parameters!sNetCheckAmount.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sOurReferenceNumber">
+                                  <Value>=Parameters!sOurReferenceNumber.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sPaytotheOrderof">
+                                  <Value>=Parameters!sPaytotheOrderof.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sVendor">
+                                  <Value>=Parameters!sVendor.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sVoid">
+                                  <Value>=Parameters!sVendor.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sYourInvoice">
+                                  <Value>=Parameters!sYourInvoice.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sDateCaps">
+                                  <Value>=Parameters!sDateCaps.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sCurrency">
+                                  <Value>=Parameters!sCurrency.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sPaymentExchRate">
+                                  <Value>=Parameters!sPaymentExchRate.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sTotalAmount">
+                                  <Value>=Parameters!sTotalAmount.Value</Value>
+                                </Parameter>
+                                <Parameter Name="pConnectionString">
+                                  <Value>=Parameters!pConnectionString.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sCheckDate">
+                                  <Value>=Parameters!sCheckDate.Value</Value>
+                                </Parameter>
+                                <Parameter Name="sPaymentAmt">
+                                  <Value>=Parameters!sPaymentAmt.Value</Value>
+                                </Parameter>
+                              </Parameters>
+                              <OmitBorderOnPageBreak>true</OmitBorderOnPageBreak>
+                              <Height>3.5in</Height>
+                              <Width>7.77in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <Color>White</Color>
+                              </Style>
+                            </Subreport>
+                          </ReportItems>
+                          <KeepTogether>true</KeepTogether>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Rectangle>
+                        <ColSpan>6</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Group1">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!AppmtCheckNum.Value</GroupExpression>
+                    </GroupExpressions>
+                    <PageBreak>
+                      <BreakLocation>Between</BreakLocation>
+                    </PageBreak>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!AppmtCheckNum.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <TablixMembers>
+                    <TablixMember>
+                      <Group Name="Group2">
+                        <GroupExpressions>
+                          <GroupExpression>=Fields!PageNum.Value</GroupExpression>
+                        </GroupExpressions>
+                        <PageBreak>
+                          <BreakLocation>Between</BreakLocation>
+                        </PageBreak>
+                      </Group>
+                      <SortExpressions>
+                        <SortExpression>
+                          <Value>=Fields!AppmtCheckNum.Value</Value>
+                        </SortExpression>
+                      </SortExpressions>
+                      <TablixMembers>
+                        <TablixMember>
+                          <Group Name="Details">
+                            <Variables>
+                              <Variable Name="CheckNum">
+                                <Value>=Fields!AppmtCheckNum.Value</Value>
+                              </Variable>
+                            </Variables>
+                          </Group>
+                          <TablixMembers>
+                            <TablixMember>
+                              <Visibility>
+                                <Hidden>true</Hidden>
+                              </Visibility>
+                              <KeepTogether>true</KeepTogether>
+                            </TablixMember>
+                          </TablixMembers>
+                          <Visibility>
+                            <Hidden>true</Hidden>
+                          </Visibility>
+                          <KeepTogether>true</KeepTogether>
+                        </TablixMember>
+                        <TablixMember>
+                          <Visibility>
+                            <Hidden>true</Hidden>
+                          </Visibility>
+                          <KeepTogether>true</KeepTogether>
+                        </TablixMember>
+                        <TablixMember />
+                        <TablixMember>
+                          <Visibility>
+                            <Hidden>true</Hidden>
+                          </Visibility>
+                          <KeepTogether>true</KeepTogether>
+                        </TablixMember>
+                        <TablixMember />
+                      </TablixMembers>
+                      <KeepTogether>true</KeepTogether>
+                    </TablixMember>
+                  </TablixMembers>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <KeepTogether>true</KeepTogether>
+            <DataSetName>APCheckLaser</DataSetName>
+            <Top>0.00694in</Top>
+            <Height>8.02032in</Height>
+            <Width>7.79777in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+        </ReportItems>
+        <Height>8.02726in</Height>
+        <Style />
+      </Body>
+      <Width>7.79777in</Width>
+      <Page>
+        <PageHeader>
+          <Height>3in</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Rectangle Name="Footer">
+              <ReportItems>
+                <Textbox Name="fTCheckAmt">
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>=ReportItems!TCheckAmt.Value</Value>
+                          <Style>
+                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Arial Narrow", Parameters!pFontDescriptor.Value)</FontFamily>
+                            <TextDecoration>Underline</TextDecoration>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                  </Paragraphs>
+                  <Top>0.51in</Top>
+                  <Left>0.083in</Left>
+                  <Height>0.175in</Height>
+                  <Width>4.47222in</Width>
+                  <Visibility>
+                    <Hidden>=Not (
+(ReportItems!FooterDisplayControl.Value = "True")
+Or
+(Globals!PageNumber = Globals!OverallTotalPages)
+)</Hidden>
+                  </Visibility>
+                  <Style>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                  </Style>
+                </Textbox>
+                <Textbox Name="fAddr1">
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>=ReportItems!Addr1.Value</Value>
+                          <Style>
+                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                  </Paragraphs>
+                  <Top>1.109in</Top>
+                  <Left>0.95in</Left>
+                  <Height>0.157in</Height>
+                  <Width>3.9in</Width>
+                  <ZIndex>1</ZIndex>
+                  <Visibility>
+                    <Hidden>=Not (
+(ReportItems!FooterDisplayControl.Value = "True")
+Or
+(Globals!PageNumber = Globals!OverallTotalPages)
+)</Hidden>
+                  </Visibility>
+                  <Style>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                  </Style>
+                </Textbox>
+                <Textbox Name="fAddr2">
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>=ReportItems!Addr2.Value</Value>
+                          <Style>
+                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                  </Paragraphs>
+                  <Top>1.266in</Top>
+                  <Left>0.95in</Left>
+                  <Height>0.157in</Height>
+                  <Width>3.9in</Width>
+                  <ZIndex>2</ZIndex>
+                  <Visibility>
+                    <Hidden>=Not (
+(ReportItems!FooterDisplayControl.Value = "True")
+Or
+(Globals!PageNumber = Globals!OverallTotalPages)
+)</Hidden>
+                  </Visibility>
+                  <Style>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                  </Style>
+                </Textbox>
+                <Textbox Name="fAddr3">
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>=ReportItems!Addr3.Value</Value>
+                          <Style>
+                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                  </Paragraphs>
+                  <Top>1.423in</Top>
+                  <Left>0.95in</Left>
+                  <Height>0.157in</Height>
+                  <Width>3.9in</Width>
+                  <ZIndex>3</ZIndex>
+                  <Visibility>
+                    <Hidden>=Not (
+(ReportItems!FooterDisplayControl.Value = "True")
+Or
+(Globals!PageNumber = Globals!OverallTotalPages)
+)</Hidden>
+                  </Visibility>
+                  <Style>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                  </Style>
+                </Textbox>
+                <Textbox Name="fAddr4">
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>=ReportItems!Addr4.Value</Value>
+                          <Style>
+                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                  </Paragraphs>
+                  <Top>1.58in</Top>
+                  <Left>0.95in</Left>
+                  <Height>0.157in</Height>
+                  <Width>3.9in</Width>
+                  <ZIndex>4</ZIndex>
+                  <Visibility>
+                    <Hidden>=Not (
+(ReportItems!FooterDisplayControl.Value = "True")
+Or
+(Globals!PageNumber = Globals!OverallTotalPages)
+)</Hidden>
+                  </Visibility>
+                  <Style>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                  </Style>
+                </Textbox>
+                <Textbox Name="fAddr5">
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>=ReportItems!Addr5.Value</Value>
+                          <Style>
+                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                  </Paragraphs>
+                  <Top>1.74139in</Top>
+                  <Left>0.95in</Left>
+                  <Height>0.157in</Height>
+                  <Width>3.9in</Width>
+                  <ZIndex>5</ZIndex>
+                  <Visibility>
+                    <Hidden>=Not (
+(ReportItems!FooterDisplayControl.Value = "True")
+Or
+(Globals!PageNumber = Globals!OverallTotalPages)
+)</Hidden>
+                  </Visibility>
+                  <Style>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                  </Style>
+                </Textbox>
+                <Textbox Name="fAddr6">
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>=ReportItems!Addr6.Value</Value>
+                          <Style>
+                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                  </Paragraphs>
+                  <Top>1.89839in</Top>
+                  <Left>0.95in</Left>
+                  <Height>0.157in</Height>
+                  <Width>3.9in</Width>
+                  <ZIndex>6</ZIndex>
+                  <Visibility>
+                    <Hidden>=Not (
+(ReportItems!FooterDisplayControl.Value = "True")
+Or
+(Globals!PageNumber = Globals!OverallTotalPages)
+)</Hidden>
+                  </Visibility>
+                  <Style>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                  </Style>
+                </Textbox>
+                <Textbox Name="fAddr7">
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>=ReportItems!Addr7.Value</Value>
+                          <Style>
+                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                  </Paragraphs>
+                  <Top>2.05539in</Top>
+                  <Left>0.95in</Left>
+                  <Height>0.157in</Height>
+                  <Width>3.9in</Width>
+                  <ZIndex>7</ZIndex>
+                  <Visibility>
+                    <Hidden>=Not (
+(ReportItems!FooterDisplayControl.Value = "True")
+Or
+(Globals!PageNumber = Globals!OverallTotalPages)
+)</Hidden>
+                  </Visibility>
+                  <Style>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                  </Style>
+                </Textbox>
+                <Textbox Name="sPaytotheOrderof1">
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>=Parameters!sPaytotheOrderof.Value</Value>
+                          <Style>
+                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                  </Paragraphs>
+                  <Top>1.388in</Top>
+                  <Left>0.167in</Left>
+                  <Height>0.5in</Height>
+                  <Width>0.685in</Width>
+                  <ZIndex>8</ZIndex>
+                  <Style>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                  </Style>
+                </Textbox>
+                <Textbox Name="sVoid">
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>="********** " + Parameters!sVoid.Value + " **********"</Value>
+                          <Style>
+                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                  </Paragraphs>
+                  <Top>1.58439in</Top>
+                  <Left>0.95in</Left>
+                  <Height>0.157in</Height>
+                  <Width>2.84375in</Width>
+                  <ZIndex>9</ZIndex>
+                  <Visibility>
+                    <Hidden>=
+(
+(ReportItems!FooterDisplayControl.Value = "True")
+Or
+(Globals!PageNumber = Globals!TotalPages)
+)</Hidden>
+                  </Visibility>
+                  <Style>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                  </Style>
+                </Textbox>
+                <Textbox Name="fTCheckAmt2">
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value />
+                          <Style>
+                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Arial Narrow", Parameters!pFontDescriptor.Value)</FontFamily>
+                            <TextDecoration>Underline</TextDecoration>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                  </Paragraphs>
+                  <Top>0.69652in</Top>
+                  <Left>0.083in</Left>
+                  <Height>0.175in</Height>
+                  <Width>4.47222in</Width>
+                  <ZIndex>10</ZIndex>
+                  <Style>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                  </Style>
+                </Textbox>
+                <Rectangle Name="Rectangle11">
+                  <ReportItems>
+                    <Textbox Name="fAppmtCheckDate2">
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=ReportItems!AppmtCheckDate.Value</Value>
+                              <Style>
+                                <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                <Format>d</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Top>0.2125in</Top>
+                      <Left>1in</Left>
+                      <Height>0.185in</Height>
+                      <Width>1in</Width>
+                      <Visibility>
+                        <Hidden>=Not (((ReportItems!FooterDisplayControl.Value = "True") Or (Globals!PageNumber = Globals!TotalPages)))</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Textbox>
+                    <Textbox Name="sCheck4">
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Parameters!sCheck.Value</Value>
+                              <Style>
+                                <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>sCheck</rd:DefaultName>
+                      <Left>2in</Left>
+                      <Height>0.2in</Height>
+                      <Width>1in</Width>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>Gray</BackgroundColor>
+                      </Style>
+                    </Textbox>
+                    <Textbox Name="sCheckDate2">
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Parameters!sCheckDate.Value</Value>
+                              <Style>
+                                <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>sCheckDate</rd:DefaultName>
+                      <Left>1in</Left>
+                      <Height>0.2in</Height>
+                      <Width>1in</Width>
+                      <ZIndex>2</ZIndex>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>Gray</BackgroundColor>
+                      </Style>
+                    </Textbox>
+                    <Textbox Name="fAppmtVendNum2">
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=ReportItems!AppmtCheckNum2.Value</Value>
+                              <Style>
+                                <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                <Format>f0</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Top>0.2125in</Top>
+                      <Left>2in</Left>
+                      <Height>0.185in</Height>
+                      <Width>1in</Width>
+                      <ZIndex>3</ZIndex>
+                      <Visibility>
+                        <Hidden>=Not (((ReportItems!FooterDisplayControl.Value = "True") Or (Globals!PageNumber = Globals!TotalPages)))</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Textbox>
+                    <Rectangle Name="Rectangle8">
+                      <ReportItems>
+                        <Textbox Name="fAppmtVendNum1">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=ReportItems!AppmtVendNum2.Value</Value>
+                                  <Style>
+                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>0.2in</Top>
+                          <Left>0.05918in</Left>
+                          <Height>0.18in</Height>
+                          <Width>0.91304in</Width>
+                          <Visibility>
+                            <Hidden>=Not (((ReportItems!FooterDisplayControl.Value = "True") Or (Globals!PageNumber = Globals!TotalPages)))</Hidden>
+                          </Visibility>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="Textbox2">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox2</rd:DefaultName>
+                          <Top>0.22in</Top>
+                          <Left>0.29801in</Left>
+                          <Height>0.17in</Height>
+                          <Width>0.55208in</Width>
+                          <ZIndex>1</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="sVendor4">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Parameters!sVendor.Value</Value>
+                                  <Style>
+                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>sVendor1</rd:DefaultName>
+                          <Height>0.2in</Height>
+                          <Width>1in</Width>
+                          <ZIndex>2</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>Gray</BackgroundColor>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                      <KeepTogether>true</KeepTogether>
+                      <Height>0.4in</Height>
+                      <Width>1in</Width>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                      </Style>
+                    </Rectangle>
+                    <Textbox Name="sContinued2">
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>="*** " + Parameters!sContinued.Value + " ***"</Value>
+                              <Style>
+                                <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>sContinued</rd:DefaultName>
+                      <Top>0.2125in</Top>
+                      <Left>1.76389in</Left>
+                      <Height>0.185in</Height>
+                      <Width>1.25in</Width>
+                      <ZIndex>5</ZIndex>
+                      <Visibility>
+                        <Hidden>=((ReportItems!FooterDisplayControl.Value = "True") Or (Globals!PageNumber = Globals!TotalPages))</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Textbox>
+                    <Textbox Name="fTSymbolRight2">
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=ReportItems!TSymbolRight.Value</Value>
+                              <Style>
+                                <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <Top>0.575in</Top>
+                      <Height>0.167in</Height>
+                      <Width>0.98611in</Width>
+                      <ZIndex>6</ZIndex>
+                      <Visibility>
+                        <Hidden>=Not (((ReportItems!FooterDisplayControl.Value = "True") Or (Globals!PageNumber = Globals!TotalPages)))</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Textbox>
+                    <Rectangle Name="Rectangle10">
+                      <ReportItems>
+                        <Textbox Name="sCheckAmount2">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Parameters!sPaymentAmt.Value</Value>
+                                  <Style>
+                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>sCheckAmount1</rd:DefaultName>
+                          <Height>0.167in</Height>
+                          <Width>2in</Width>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>Gray</BackgroundColor>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="sVoid3">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>="**** " + Parameters!sVoid.Value + " ****"</Value>
+                                  <Style>
+                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>sVoid1</rd:DefaultName>
+                          <Top>0.175in</Top>
+                          <Height>0.167in</Height>
+                          <Width>2in</Width>
+                          <ZIndex>1</ZIndex>
+                          <Visibility>
+                            <Hidden>=((ReportItems!FooterDisplayControl.Value = "True") Or (Globals!PageNumber = Globals!TotalPages))</Hidden>
+                          </Visibility>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="sVoid4">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Right("******************" &amp; ReportItems!TcAmtCheck.Value, 18)</Value>
+                                  <Style>
+                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                    <Format>n2</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>sVoid1</rd:DefaultName>
+                          <Top>0.175in</Top>
+                          <Left>0.01389in</Left>
+                          <Height>0.167in</Height>
+                          <Width>1.98611in</Width>
+                          <ZIndex>2</ZIndex>
+                          <Visibility>
+                            <Hidden>=Not (((ReportItems!FooterDisplayControl.Value = "True") Or (Globals!PageNumber = Globals!TotalPages)))</Hidden>
+                          </Visibility>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                      <KeepTogether>true</KeepTogether>
+                      <Top>0.39889in</Top>
+                      <Left>1in</Left>
+                      <Height>0.467in</Height>
+                      <Width>2.01389in</Width>
+                      <ZIndex>7</ZIndex>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                      </Style>
+                    </Rectangle>
+                  </ReportItems>
+                  <KeepTogether>true</KeepTogether>
+                  <Top>0.12604in</Top>
+                  <Left>4.66278in</Left>
+                  <Height>0.86589in</Height>
+                  <Width>3.01389in</Width>
+                  <ZIndex>11</ZIndex>
+                  <Style>
+                    <Border>
+                      <Style>Solid</Style>
+                    </Border>
+                    <BottomBorder>
+                      <Style>None</Style>
+                    </BottomBorder>
+                    <LeftBorder>
+                      <Style>None</Style>
+                    </LeftBorder>
+                  </Style>
+                </Rectangle>
+              </ReportItems>
+              <Left>0.00671in</Left>
+              <Height>3in</Height>
+              <Width>7.77in</Width>
+              <Visibility>
+                <Hidden>=(Parameters!PrintAPCheckStubs.Value = 1)</Hidden>
+              </Visibility>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Rectangle>
+            <Textbox Name="FooterDisplayControl">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=ReportItems!IsGroupEnd.Value</Value>
+                      <Style>
+                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>2.47221in</Top>
+              <Left>0.125in</Left>
+              <Height>0.2in</Height>
+              <Width>1in</Width>
+              <ZIndex>1</ZIndex>
+              <Visibility>
+                <Hidden>true</Hidden>
+              </Visibility>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <BackgroundColor>Silver</BackgroundColor>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageHeader>
+        <PageFooter>
+          <Height>0in</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageFooter>
+        <LeftMargin>0.25in</LeftMargin>
+        <RightMargin>0.25in</RightMargin>
+        <TopMargin>0.25in</TopMargin>
+        <BottomMargin>0.5in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="PSessionIDChar">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <Prompt>PSession IDChar</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PPayType">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <Prompt>PPay Type</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PDistDetail">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <Prompt>PDist Detail</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PPayDateStarting">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <Prompt>PPay Date Starting</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PPayDateEnding">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <Prompt>PPay Date Ending</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TaskId">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <Prompt>Task Id</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PrintAPCheckStubs">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>0</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Print APCheck Stubs</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="pLanguage">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <Prompt>pLanguage</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="pFontDescriptor">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
+      <Prompt>pFontDescriptor</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="BG_COMPANYNAME">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>BG~COMPANYNAME~</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>BG~COMPANYNAME~</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PFormType">
+      <DataType>String</DataType>
+      <Prompt>PForm Type</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BG_SITEID">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>BG~SITEID~</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>BG~SITEID~</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BG_USERID">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>BG~USERID~</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>BG~USERID~</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="sAmountPaid">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>sAmountPaid</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>sAmountPaid_</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="sCheck">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>sCheck</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>sCheck_</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="sCheckAmount">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>sCheckAmount</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>sCheckAmount_</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="sCheckAmt">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>sCheckAmt</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>sCheckAmt_</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="sContinued">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>sContinued</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>sContinued_</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="sDiscountTaken">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>sDiscountTaken</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>sDiscountTaken_</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="sInvoiceAmount">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>sInvoiceAmount</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>sInvoiceAmount_</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="sInvoiceDate">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>sInvoiceDate</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>sInvoiceDate_</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="sNetCheckAmount">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>sNetCheckAmount</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>sNetCheckAmount_</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="sOurReferenceNumber">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>sOurReferenceNumber</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>sOurReferenceNumber_</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="sPaytotheOrderof">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>sPaytotheOrderof</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>sPaytotheOrderof_</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="sVendor">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>sVendor</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>sVendor_</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="sVoid">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>sVoid</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>sVoid_</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="sYourInvoice">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>sYourInvoice</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>sYourInvoice_</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="sDateCaps">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>sDateCaps</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>sDateCaps_</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="sYYYYMMDD">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>sYYYYMMDD</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>sYYYYMMDD_</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="sCurrency">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>sCurrency</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>sCurrency_</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="sPaymentExchRate">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>sPaymentExchRate</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>sPaymentExchRate_</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="sTotalAmount">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>sTotalAmount</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>sTotalAmount_</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="pConnectionString">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Data Source=uscowsldb5\sl803;Initial Catalog=OH_App;</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>pConnectionString</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="sCheckDate">
+      <DataType>String</DataType>
+      <Prompt>sCheckDate_</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="sPaymentAmt">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>sPaymentAmt</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>sPaymentAmt_</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Language>=Parameters!pLanguage.Value</Language>
+  <Variables>
+    <Variable Name="VendorNum">
+      <Value />
+      <Writable>true</Writable>
+    </Variable>
+  </Variables>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>22a529d3-fe36-4a64-b69c-34570a17e7e7</rd:ReportID>
+</Report>
