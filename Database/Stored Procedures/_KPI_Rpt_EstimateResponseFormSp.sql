@@ -1,241 +1,32 @@
 USE [KPI_App]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Rpt_EstimateResponseFormSp]    Script Date: 09/06/2017 10:55:34 ******/
+/****** Object:  StoredProcedure [dbo].[_KPI_Rpt_EstimateResponseFormSp]    Script Date: 08/30/2017 15:41:30 ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
-/* $Header: /ApplicationDB/Stored Procedures/Rpt_EstimateResponseFormSp.sp 71    2/04/15 4:03a csun $  */
-/*
-***************************************************************
-*                                                             *
-*                           NOTICE                            *
-*                                                             *
-*   THIS SOFTWARE IS THE PROPERTY OF AND CONTAINS             *
-*   CONFIDENTIAL INFORMATION OF INFOR AND/OR ITS AFFILIATES   *
-*   OR SUBSIDIARIES AND SHALL NOT BE DISCLOSED WITHOUT PRIOR  *
-*   WRITTEN PERMISSION. LICENSED CUSTOMERS MAY COPY AND       *
-*   ADAPT THIS SOFTWARE FOR THEIR OWN USE IN ACCORDANCE WITH  *
-*   THE TERMS OF THEIR SOFTWARE LICENSE AGREEMENT.            *
-*   ALL OTHER RIGHTS RESERVED.                                *
-*                                                             *
-*   (c) COPYRIGHT 2008 INFOR.  ALL RIGHTS RESERVED.           *
-*   THE WORD AND DESIGN MARKS SET FORTH HEREIN ARE            *
-*   TRADEMARKS AND/OR REGISTERED TRADEMARKS OF INFOR          *
-*   AND/OR ITS AFFILIATES AND SUBSIDIARIES. ALL RIGHTS        *
-*   RESERVED.  ALL OTHER TRADEMARKS LISTED HEREIN ARE         *
-*   THE PROPERTY OF THEIR RESPECTIVE OWNERS.                  *
-*                                                             *
-***************************************************************
-*/
 
-/* $Archive: /ApplicationDB/Stored Procedures/Rpt_EstimateResponseFormSp.sp $
- *
- * SL9.00 71 188008 csun Wed Feb 04 04:03:29 2015
- * Issue#188008
- * RS7090,Add 3 new columns for report dataset.
- *
- * SL9.00 70 189265 Ehe Tue Jan 06 03:16:29 2015
- * RS7088 Construction
- * 189265 Add new output field estimate_response_rpt_title .
- *
- * SL9.00 69 189265 Ehe Mon Jan 05 01:56:58 2015
- * RS7088 Construction
- * 189265 Change the sp to add new input and output parameters for RS 7088.
- *
- * SL9.00 68 188369 pgross Thu Dec 18 11:32:31 2014
- * Surcharges are created with amounts greater than 2 decimals in both the arinv and arinvd tables.   They are then posted through to A/R and payments cannot be posted against the invoice.
- * ensure that surcharges are rounded with the proper currency
- *
- * SL9.00 67 188369 pgross Thu Dec 18 10:57:05 2014
- * round the extended surcharge amount
- *
- * SL9.00 66 176919 Mding2 Fri Mar 21 03:28:00 2014
- * Fix issue 176919.
- * use parm.key = 0 when read data from parms
- *
- * SL9.00 65 175291 Ezi Fri Feb 14 02:02:02 2014
- * Estimate Response report Alternate address issues
- * Issue 175291 - Create new sub procedure FormatAddressWithContactNameSp for display a contact name.
- *
- * SL9.00 64 171385 jzhou Wed Dec 04 01:12:51 2013
- * Germany Country Pack - Report layout changes
- * Issue 171385:
- * When the value of parms.use_alt_addr_report_formatting is 1, use function GetParmsSingleLineAddressSp to get the value of @Addr0.
- *
- * SL8.04 63 167762 Igui Thu Sep 05 03:51:26 2013
- * Discount is incorrect
- * Issue 167762 - use UDDT LineDiscType for CoitemDisc instead.
- *
- * SL8.04 62 167762 Igui Tue Sep 03 05:22:00 2013
- * Discount is incorrect
- * Issue 167762 - change CoitemDisc data type from Decimal(9, 4) to Decimal(13, 8).
- *
- * SL8.04 61 168057 Jgao1 Mon Sep 02 04:56:03 2013
- * Report not showing any data
- * 168057:  Change INNER JOIN to LEFT JOIN for sucharge
- *
- * SL8.04 60 165732 Ezi Wed Aug 28 22:50:51 2013
- * Item content information line should be set a hidden condition when an item is eligible to make references for item content or not.
- * Issue 165732 - Remove Tab character.
- *
- * SL8.04 59 165732 Shu Fri Aug 23 04:20:25 2013
- * Item content information line should be set a hidden condition when an item is eligible to make references for item content or not.
- * Issue 165732 - Add Item Content field into sp to set a hidden condition for reports when an item is eligible to make references for item content or not. 
- *
- * SL8.04 58 142850 Lpeng Mon Aug 05 02:07:05 2013
- * TRK142850: format BGUser argurment.
- *
- * SL8.04 57 165732 Ezi Thu Jul 25 04:13:52 2013
- * Item content information line should be set a hidden condition when an item is eligible to make references for item content or not.
- * Issue 165732 - Add output field item_content (1 = the definition of item contents that provide the basis for the calculation of surcharges included with items that are purchased from vendors and sold to customers.)
- *
- * SL8.04 56 162919 jzhou Thu Jul 04 04:26:08 2013
- * Code of how to get the value of overview seems not consistent in some sps
- * Issue 162919:
- * Format the codes.
- *
- * SL8.04 55 162919 jzhou Wed Jul 03 04:58:30 2013
- * Issue 162919:
- * To make the codes in SPs which get the value of overview from the item_lang.overview be consistent.
- *
- * SL8.04 54 159127 Dmcwhorter Mon Jul 01 09:45:11 2013
- * Price rounding is incorrect on Customer order lines as it multiplies by qty ordered before rounding
- * RS6172 - Alternate Net Price Calculation.
- *
- * SL8.04 53 142850 Lpeng Tue Jun 18 11:44:42 2013
- * Fix issue 142850: Rename to BGUser
- *
- * SL8.04 51 163425 Azhang Sat Jun 08 01:43:23 2013
- * Some code need wash up for code review
- * 163425: Initialize @Surcharge before calculate Surcharge.
- *
- * SL8.04 50 rs5136 Azhang Mon May 27 03:07:30 2013
- * RS5136: Add surcharge calculation.
- *
- * SL8.04 49 RS5136 Lpeng Wed May 15 04:14:49 2013
- * RS5136:Modify reports
- *
- * SL8.04 48 rs4615 Jsun Thu Dec 27 03:47:33 2012
- * RS4615: Multi - Add Site within a Site Functionality
- *
- * SL8.04 44 149642 Clarsco Mon Oct 01 15:51:47 2012
- * SL does not print BuyDesign Configured Lines on the Estimate Response Form Report if there are no Components with External Print Codes.
- * Fixed Issue 149642
- * For SyteLine Configuration section, add a section of code that checks for no @ConfigSet rows.
- * If none then add a NULL one.
- *
- * SL8.04 43 RS5200 Cliu Wed Aug 22 02:40:07 2012
- * RS5200
- * 1. Add a new parameter "@PrintItemOverview".
- * 2. Add a new output field "ItemOverview" which is got from item_lang.item or  item.item_overview.
- *
- * SL8.03 42 148331 Clarsco Mon Apr 23 16:11:09 2012
- * Estimate Response Form Report Total is incorrect when Estimate includes a Line for a Configured Item.
- * Fixed Issue 148331
- * Config Detail lines 2 and up have zero value for TcAmtLineNet and TcTotDiscount.
- *
- * SL8.03 41 145935 pgross Fri Dec 23 14:30:19 2011
- * use the language of the Prospect
- *
- * SL8.03 40 142634 Mmarsolo Mon Oct 03 09:39:46 2011
- * Item Description not showing on the Estimate Response Form Report and the U/M has no column header.
- * 142634 - Add else condition for multi-lingual item description
- *
- * SL8.03 39 RS4978 EGriffiths Wed Jul 20 11:39:29 2011
- * RS4978 - Corrected DataTypes
- *
- * SL8.03 38 RS4428 Mzhang2 Wed Jul 06 02:39:08 2011
- * RS4428 - Query to CoView or CoItemView to includes historical data.
- *
- * SL8.03 37 137578 Cajones Fri Jun 03 08:17:55 2011
- * The totals are blank for estimate lines containing configured items and the print planning items parameter is selected.
- * Issue 137578
- * - Added code to load the reportset columns AmountFormat and AmountPlaces when creating planning item materials records.
- * - Also added coitemitem to the where statement when reportset amounts are updated so that component items don't get updated with the parent items price.
- *
- * SL8.03 36 RS5123 Cajones Wed Mar 23 10:20:19 2011
- * RS5123 - Added code to retrieve multi-lingual translations for the Terms Description, Item Description and Order Text.
- *
- * SL8.02 35 127839 calagappan Thu Apr 29 11:45:41 2010
- * Estimate Response report rounds unit price to 2 decimals and causes the extended price to be differnet then the order verification report output.
- * obtain user-defined quantity and amount formats and include in output
- *
- * SL8.02 34 rs4588 Dahn Thu Mar 04 16:28:24 2010
- * rs4588 copyright header changes.
- *
- * SL8.01 33 120946 pgross Wed Apr 29 15:54:30 2009
- * The Estimate Response Form does not round prices the same way the Estimate Lines round prices
- * round the net price
- *
- * SL8.01 32 RS4312 DPalmer Tue Jan 13 14:31:24 2009
- * RS4312 - If there is a ProspectId, but not a CustNum, then get the Currency Code from the prospect record.
- *
- * SL8.01 31 rs4312 Dahn Fri Jan 09 09:04:24 2009
- * rs4312 light
- *
- * SL8.01 30 rs3953 Vlitmano Tue Aug 26 18:59:13 2008
- * RS3953 - Changed a Copyright header?
- *
- * SL8.01 29 rs3953 Vlitmano Mon Aug 18 15:37:48 2008
- * Changed a Copyright header information(RS3959)
- *
- * SL8.00 28 RS2968 nkaleel Fri Feb 23 04:50:15 2007
- * changing copyright information(RS2968)
- *
- * SL8.00 27 RS2968 prahaladarao.hs Tue Jul 11 11:17:36 2006
- * RS 2968, Name change CopyRight Update.
- *
- * SL8.00 26 91818 NThurn Mon Jan 09 10:34:15 2006
- * Inserted standard External Touch Point call.  (RS3177)
- *
- * SL7.05 25 91534 Grosphi Tue Dec 27 14:03:34 2005
- * Incorrect discount amount when select "Order Discount Type = Amount"
- * corrected calculation of order-level discount percent
- *
- * SL7.05 24 90344 Hcl-jainami Thu Dec 08 12:58:25 2005
- * Estimate Response Form is not printing for customers with a language code specified
- * Checked-in for issue 90344:
- * Removed the following three unwanted parameters to the SP and related code:
- * @BeginCustNum
- * @EndCustNum
- * @LangCode
- *
- * SL7.05 23 87088 hcl-kansanu Wed May 18 07:48:45 2005
- * Missing header and incorrect pagination with small amount of data on second page
- * Issue No. - 87088
- *
- * Change in Stored Procedure "Rpt_EstimateResponseSP"
- * (Update Header Field of Report "EstimateFormResponse")
- *
- * SL7.05 22 87099 Hcl-jainami Tue May 10 12:24:26 2005
- * Notes on the customer bill-to are not printing on the Estimate Response Form
- * Checked-in for issue 87099:
- * Added code to display Bill To as well as Ship To Notes.
- *
- * SL7.04 22 87099 Hcl-jainami Tue May 10 11:20:46 2005
- * Notes on the customer bill-to are not printing on the Estimate Response Form
- * Checked-in for issue 87099:
- * Added code to display Bill To as well as Ship To Notes.
- *
- * SL7.04 21 85982 Grosphi Fri Feb 18 14:42:50 2005
- * When Entering a Flat Discount  - system is taking that flat amount and calculating the discount percent field.
- * 1)  added an index to @reportset for performance
- * 2)  support flat discount amounts
- *
- * SL7.04 20 85343 Grosphi Tue Feb 01 16:25:00 2005
- * allow for 55 characters in displayed feature string
- *
- * SL7.04 19 84598 Hcl-chauaja Mon Jan 10 04:05:11 2005
- * Reports print singly instead of in groups
- * Issue 84598
- *
- * $NoKeywords: $
- */
-CREATE PROCEDURE [dbo].[Rpt_EstimateResponseFormSp] (
+
+/***************************************************************************\
+* TLC Group, Inc. 
+*
+* Author: Laurence Ledford
+*
+* Program Name: dbo._KPI_Rpt_EstimateResponseFormSp
+* Program Type: Stored Procedure
+* Initial Program Version: Rpt_EstimateResponseFormSp.sp 71
+* Initial Date: 08/10/2017
+*     Comments: Add additional data points for the Estimate
+*
+* ID		Date		INI	Description
+* ------	----------	---	---------------------------------------- 
+* TLCG01	08/10/2017	LKL	Initial Version
+*
+\***************************************************************************/
+CREATE PROCEDURE [dbo].[_KPI_Rpt_EstimateResponseFormSp] (
    @EstimateText               ListYesNoType = 1
  , @StdOrderText               ListYesNoType = 1
  , @ConfigDetails              NVARCHAR(1)   = 'E'
@@ -386,6 +177,7 @@ DECLARE -- these are all good
  , @BankName                 NameType
  , @BankTransitNum           BankTransitNumType
  , @BankAccountNo            BankAccountType
+ --, @TakenBy					TakenByType -- TLCG01
 
 DECLARE -- these are all good
    @TtCompConfigId           ConfigIdType
@@ -534,51 +326,14 @@ DECLARE @reportset TABLE (
  , bank_name                 NameType      
  , bank_transit_num          BankTransitNumType
  , bank_acct_no              BankAccountType
+ 
+ --, taken_by					TakenByType -- TLCG01
 
 primary key (CoCoNum, CoitemCoLine, CoitemUM desc, FeatureDisplayStr desc, JobrouteJob, JobrouteSuffix, JobrouteOperNum, seq)
 )
 
 SET @EstimateStarting = isnull(@EstimateStarting, dbo.lowcharacter())
 SET @EstimateEnding   = isnull(@EstimateEnding, dbo.highcharacter())
-
-   -- Check for existence of Generic External Touch Point routine (this section was generated by SpETPCodeSp and inserted by CallETPs.exe):
-   IF OBJECT_ID(N'dbo.EXTGEN_Rpt_EstimateResponseFormSp') IS NOT NULL
-   BEGIN
-      DECLARE @EXTGEN_SpName sysname
-      SET @EXTGEN_SpName = N'dbo.EXTGEN_Rpt_EstimateResponseFormSp'
-      -- Invoke the ETP routine, passing in (and out) this routine's parameters:
-      EXEC @EXTGEN_SpName
-         @EstimateText
-         , @StdOrderText
-         , @ConfigDetails
-         , @PrintItemType
-         , @PrintLineReleaseText
-         , @PrintBillTo
-         , @PrintShipTo
-         , @PrintPlanningItemMaterials
-         , @PrintEuroTotal
-         , @PrintPrice
-         , @DisplayHeader
-         , @EstimateStarting
-         , @EstimateEnding
-         , @ShowInternal
-         , @ShowExternal
-         , @PrintItemOverview
-         , @PrintDrawingNumber
-         , @PrintEndUserItem
-         , @PrintHeaderOnAllPages
-         , @PrintDueDate
-         , @PrintProjectedDate
-         , @pSite
-         , @BGUser
-
-      IF @@TRANCOUNT > 0
-         COMMIT TRANSACTION
-      EXEC dbo.CloseSessionContextSp @SessionID = @RptSessionID
-      -- ETP routine must take over all desired functionality of this standard routine:
-      RETURN
-   END
-   -- End of Generic External Touch Point code.
 
 SET @EstimateStarting = dbo.ExpandKyByType('CoNumType', @EstimateStarting)
 SET @EstimateEnding = dbo.ExpandKyByType('CoNumType', @EstimateEnding)
@@ -714,6 +469,7 @@ SELECT
  , bank_hdr.name       
  , bank_hdr.bank_transit_num
  , customer.bank_acct_no
+ --, co.taken_by -- TLCG01
 FROM CoView co
    left outer join customer on
       customer.cust_num = co.cust_num
@@ -792,6 +548,7 @@ BEGIN
     , @BankName
     , @BankTransitNum
     , @BankAccountNo
+--    , @TakenBy -- TLCG01
 
    IF @@FETCH_STATUS <> 0
         BREAK
@@ -1643,93 +1400,112 @@ DEALLOCATE surcharge_cal_crs
 
 -- Select everything from our recordset table for output
 SELECT
-   Addr0
- , Addr1
- , ParmsPhone
- , CoCustNum
- , CoProspectId
- , CoPhone
- , CustaddrFaxNum
- , CoCoNum
- , TermsDescription
- , CoOrderDate
- , CoCloseDate
- , CoSlsman
- , CoDisc
- , CustaddrCurrCode
- , CurrencyDescription
- , CoitemQtyOrderedConv
- , CoitemCustItem
- , CoitemItem
- , CoitemCoLine
- , CoitemCoRelease
- , CoitemUM
- , CoitemDisc
- , ItemDescription
- , ItemOverview
- , CoitemCfgDetail
- , CfgcompCompName
- , CfgcompQty
- , CfgcompPrice
- , CfgattrName
- , CfgattrValue
- , TtCompOperNum
- , TtCompSequence
- , TcCprPrice
- , TcAmtLineNet
- , CoContact
- , CoparmsCoText1
- , CoparmsCoText2
- , CoparmsCoText3
- , TcTotSTotal
- , TcTotDiscount
- , CoSalesTax
- , CoSalesTax2
- , CoMiscCharges
- , EuroAmount
- , TEuroExists
- , TcTotTotal
- , CoitemNoteExists
- , CoitemRowPointer
- , CoNoteExists
- , CoRowPointer
- , CustomerBillToNoteExists
- , CustomerBillToRowPointer
- , CustomerNoteExists
- , CustomerRowPointer
- , NumOfTaxSys
- , JobrouteJob
- , JobrouteSuffix
- , JobrouteOperNum
- , FeatureDisplayQty
- , FeatureDisplayUM
- , FeatureDisplayDesc
- , FeatureDisplayStr
- , AmountFormat
- , AmountPlaces
- , CostPriceFormat
- , CostPricePlaces
- , QtyUnitFormat
- , QtyUnitPlaces
- , TotalSurcharge
- , Item_Content
- , drawing_nbr
- , delterm
- , end_user
- , del_term_desc
- , url
- , email_addr
- , addr2
- , due_date
- , project_date
- , office_addr_footer
- , estimate_response_rpt_title
- , bank_name 
- , bank_transit_num
- , bank_acct_no
-FROM @reportset
+   r.Addr0
+ , r.Addr1
+ , r.ParmsPhone
+ , r.CoCustNum
+ , r.CoProspectId
+ , r.CoPhone
+ , r.CustaddrFaxNum
+ , r.CoCoNum
+ , r.TermsDescription
+ , r.CoOrderDate
+ , r.CoCloseDate
+ , r.CoSlsman
+ , r.CoDisc
+ , r.CustaddrCurrCode
+ , r.CurrencyDescription
+ , r.CoitemQtyOrderedConv
+ , r.CoitemCustItem
+ , r.CoitemItem
+ , r.CoitemCoLine
+ , r.CoitemCoRelease
+ , r.CoitemUM
+ , r.CoitemDisc
+ , r.ItemDescription
+ , r.ItemOverview
+ , r.CoitemCfgDetail
+ , r.CfgcompCompName
+ , r.CfgcompQty
+ , r.CfgcompPrice
+ , r.CfgattrName
+ , r.CfgattrValue
+ , r.TtCompOperNum
+ , r.TtCompSequence
+ , r.TcCprPrice
+ , r.TcAmtLineNet
+ , r.CoContact
+ , r.CoparmsCoText1
+ , r.CoparmsCoText2
+ , r.CoparmsCoText3
+ , r.TcTotSTotal
+ , r.TcTotDiscount
+ , r.CoSalesTax
+ , r.CoSalesTax2
+ , r.CoMiscCharges
+ , r.EuroAmount
+ , r.TEuroExists
+ , r.TcTotTotal
+ , r.CoitemNoteExists
+ , r.CoitemRowPointer
+ , r.CoNoteExists
+ , r.CoRowPointer
+ , r.CustomerBillToNoteExists
+ , r.CustomerBillToRowPointer
+ , r.CustomerNoteExists
+ , r.CustomerRowPointer
+ , r.NumOfTaxSys
+ , r.JobrouteJob
+ , r.JobrouteSuffix
+ , r.JobrouteOperNum
+ , r.FeatureDisplayQty
+ , r.FeatureDisplayUM
+ , r.FeatureDisplayDesc
+ , r.FeatureDisplayStr
+ , r.AmountFormat
+ , r.AmountPlaces
+ , r.CostPriceFormat
+ , r.CostPricePlaces
+ , r.QtyUnitFormat
+ , r.QtyUnitPlaces
+ , Sur.TotalSurcharge
+ , r.Item_Content
+ , r.drawing_nbr
+ , r.delterm
+ , r.end_user
+ , r.del_term_desc
+ , r.url
+ , r.email_addr
+ , r.addr2
+ , r.due_date
+ , r.project_date
+ , r.office_addr_footer
+ , r.estimate_response_rpt_title
+ , r.bank_name 
+ , r.bank_transit_num
+ , r.bank_acct_no
+ 
+ -- START - TLCG01
+ , q1.name CoSlsmanName
+ , c.taken_by
+ -- END - TLCG01
+ 
+FROM @reportset r
 LEFT JOIN (SELECT CoNum,SUM(Surcharge) AS TotalSurcharge FROM @SurchargeTable GROUP BY CoNum) Sur
 ON CoCoNum = Sur.CoNum
+-- START - TLCG01
+LEFT JOIN (
+SELECT sls.slsman, CASE WHEN sls.outside = 1 THEN v.name ELSE e.name END name
+FROM slsman sls
+LEFT JOIN employee e
+	ON e.emp_num = sls.ref_num
+LEFT JOIN vendaddr v
+	ON v.vend_num = sls.ref_num
+) q1
+	ON q1.slsman = CoSlsman
+INNER JOIN co_mst c
+	ON c.co_num = CoCoNum
+-- END - TLCG01
 
 ORDER BY CoCoNum
    , CoitemCoLine
@@ -1741,6 +1517,9 @@ ORDER BY CoCoNum
 
 COMMIT TRANSACTION
 EXEC dbo.CloseSessionContextSp @SessionID = @RptSessionID
+
+
+
 GO
 
 

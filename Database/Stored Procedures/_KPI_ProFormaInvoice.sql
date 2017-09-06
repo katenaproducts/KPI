@@ -1,7 +1,7 @@
 USE [KPI_App]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Rpt_EstimateResponseFormSp]    Script Date: 09/06/2017 10:55:34 ******/
+/****** Object:  StoredProcedure [dbo].[_KPI_ProFormaInvoice]    Script Date: 08/30/2017 15:41:15 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -235,7 +235,7 @@ GO
  *
  * $NoKeywords: $
  */
-CREATE PROCEDURE [dbo].[Rpt_EstimateResponseFormSp] (
+CREATE PROCEDURE [dbo].[_KPI_ProFormaInvoice] (
    @EstimateText               ListYesNoType = 1
  , @StdOrderText               ListYesNoType = 1
  , @ConfigDetails              NVARCHAR(1)   = 'E'

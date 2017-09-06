@@ -1,12 +1,13 @@
 USE [KPI_App]
 GO
 
-/****** Object:  StoredProcedure [dbo].[Rpt_OrderVerificationSp]    Script Date: 09/06/2017 11:23:41 ******/
+/****** Object:  StoredProcedure [dbo].[EXTGEN_Rpt_OrderVerificationSp]    Script Date: 08/30/2017 15:48:40 ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 /* $Header: /ApplicationDB/Stored Procedures/Rpt_OrderVerificationSp.sp 152   3/27/15 2:15p Cajones $  */
 /*
@@ -532,7 +533,7 @@ GO
  *
  * $NoKeywords: $
  */
-CREATE PROCEDURE [dbo].[Rpt_OrderVerificationSp]
+CREATE PROCEDURE [dbo].[EXTGEN_Rpt_OrderVerificationSp]
 (
    @CoTypeRegular                   ListYesNoType       = NULL,
    @CoTypeBlanket                   ListYesNoType       = NULL,
@@ -3295,10 +3296,20 @@ END
 CLOSE      SurchargeCursor
 DEALLOCATE SurchargeCursor
 
+
+
 --order by slsman or co_num
 IF @Sortby = 'S'
-   SELECT  Rep.*,sur.SumTotalSurcharge, coi.whse, ca.carrier_account,co.Taken_by
+   SELECT   co.Uf_LineDisc, coi.disc as KPIDisc,Rep.*,sur.SumTotalSurcharge, 
+   coi.whse,
+   case
+		when co.ssspj_override = 1  then    ', Account: ' + isnull(co.ssspj_carrier_account,'')
+   else ', Account: ' + isnull(ca.carrier_account, '') 
+   end
+   as carrier_account,
+   co.Taken_by
    FROM @Reportset Rep
+   
    INNER JOIN (SELECT salesman, SUM(TotalSurcharge) AS SumTotalSurcharge FROM @SurchargeTable GROUP BY salesman) AS sur
    ON Rep.salesman = sur.salesman
    LEFT OUTER JOIN coitem coi on Rep.co_num = coi.co_num and Rep.co_line = coi.co_line and Rep.co_release = coi.co_release
@@ -3307,7 +3318,7 @@ IF @Sortby = 'S'
    WHERE @Severity = 0
    ORDER BY
       salesman ASC
-      , co_num ASC, co_line ASC, isnull(Rep.co_release, 0) ASC, CompOperNum, CompSequence
+      , rep.co_num ASC, co_line ASC, isnull(Rep.co_release, 0) ASC, CompOperNum, CompSequence
       , isnull(UM, '') DESC  -- Non-feature record first
       , isnull(FeatureDisplayStr, '') DESC  -- Feature string second
       , JobrouteJob  -- Feature materials last (in order)
@@ -3315,8 +3326,18 @@ IF @Sortby = 'S'
       , JobrouteOperNum
 ELSE
 BEGIN
-   SELECT  Rep.*,sur.SumTotalSurcharge, coi.whse, ca.carrier_account, co.taken_by
+   SELECT  co.Uf_LineDisc,coi.disc as KPIDisc, Rep.*,sur.SumTotalSurcharge,
+    coi.whse,
+     case
+		when co.ssspj_override = 1  then ', Account: ' + isnull(co.ssspj_carrier_account,'')
+		else   ', Account: ' + isnull(ca.carrier_account, '') 
+
+		end
+	
+   as carrier_account, 
+    co.taken_by
    FROM @Reportset Rep
+  
    INNER JOIN (SELECT co_num, SUM(TotalSurcharge) AS SumTotalSurcharge FROM @SurchargeTable GROUP BY co_num) AS sur
    ON Rep.co_num = sur.co_num
    LEFT OUTER JOIN coitem coi on Rep.co_num = coi.co_num and Rep.co_line = coi.co_line and Rep.co_release = coi.co_release
@@ -3324,7 +3345,7 @@ BEGIN
    LEFT OUTER JOIN co co on Rep.co_num = co.co_num
    WHERE @Severity = 0
    ORDER BY
-      co_num ASC, co_line ASC, isnull(Rep.co_release, 0) ASC, CompOperNum, CompSequence
+      rep.co_num ASC, co_line ASC, isnull(Rep.co_release, 0) ASC, CompOperNum, CompSequence
       , isnull(UM, '') DESC  -- Non-feature record first
       , isnull(FeatureDisplayStr, '') DESC  -- Feature string second
       , JobrouteJob  -- Feature materials last (in order)
@@ -3411,6 +3432,7 @@ BEGIN
 END
 
 RETURN @Severity
+
 GO
 
 
