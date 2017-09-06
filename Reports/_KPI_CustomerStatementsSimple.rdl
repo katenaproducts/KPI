@@ -398,7 +398,7 @@
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.03125in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -781,7 +781,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.03125in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -1157,14 +1157,13 @@
                           </Style>
                         </Textbox>
                         <ColSpan>2</ColSpan>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>2.03708in</Height>
+                  <Height>1.98208in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -1241,6 +1240,9 @@
                             </Textbox>
                           </ReportItems>
                           <KeepTogether>true</KeepTogether>
+                          <Visibility>
+                            <Hidden>true</Hidden>
+                          </Visibility>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1267,7 +1269,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>2.13542in</Height>
+                  <Height>1.45986in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -1329,7 +1331,7 @@
                               </Paragraphs>
                               <rd:DefaultName>contact__3</rd:DefaultName>
                               <Top>0.31028in</Top>
-                              <Height>1.77458in</Height>
+                              <Height>1.08708in</Height>
                               <Width>3.6438in</Width>
                               <ZIndex>1</ZIndex>
                               <Style>
@@ -2965,76 +2967,6 @@
                                 </RightBorder>
                               </Style>
                             </Rectangle>
-                            <Textbox Name="Textbox267">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Parameters!sRemitTo.Value</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                        <FontWeight>Bold</FontWeight>
-                                      </Style>
-                                    </TextRun>
-                                    <TextRun>
-                                      <Value>:</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                        <FontWeight>Bold</FontWeight>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>Textbox267</rd:DefaultName>
-                              <Top>0.15in</Top>
-                              <Height>0.25in</Height>
-                              <Width>1in</Width>
-                              <ZIndex>1</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                            <Textbox Name="officeLongaddr">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Iif(Parameters!pUseAlternateAddressReportFormat.Value=1, Nothing, Fields!officeLongaddr.Value)</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>officeLongaddr</rd:DefaultName>
-                              <Top>1.016cm</Top>
-                              <Height>3.95499cm</Height>
-                              <Width>7.64826cm</Width>
-                              <ZIndex>2</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
                             <Textbox Name="StComm1">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
@@ -3058,7 +2990,7 @@
                               <Left>3.25968cm</Left>
                               <Height>0.25in</Height>
                               <Width>5.94166in</Width>
-                              <ZIndex>3</ZIndex>
+                              <ZIndex>1</ZIndex>
                               <Visibility>
                                 <Hidden>=IIf(ReportItems!Textbox171.Value, false, true)</Hidden>
                               </Visibility>
@@ -3095,7 +3027,7 @@
                               <Left>3.25968cm</Left>
                               <Height>0.25in</Height>
                               <Width>5.94166in</Width>
-                              <ZIndex>4</ZIndex>
+                              <ZIndex>2</ZIndex>
                               <Visibility>
                                 <Hidden>=IIf(ReportItems!Textbox171.Value, false, true)</Hidden>
                               </Visibility>
@@ -3138,7 +3070,7 @@
                               <Left>3.1516in</Left>
                               <Height>0.25in</Height>
                               <Width>1in</Width>
-                              <ZIndex>5</ZIndex>
+                              <ZIndex>3</ZIndex>
                               <Visibility>
                                 <Hidden>=IIf(ReportItems!Textbox171.Value, False, True) Or Parameters!PrAgedTot.Value = 0</Hidden>
                               </Visibility>
@@ -3176,7 +3108,7 @@
                               <Left>4.24535in</Left>
                               <Height>0.25in</Height>
                               <Width>0.7in</Width>
-                              <ZIndex>6</ZIndex>
+                              <ZIndex>4</ZIndex>
                               <Visibility>
                                 <Hidden>=IIf(ReportItems!Textbox171.Value, False, True) Or Parameters!PrAgedTot.Value = 0</Hidden>
                               </Visibility>
@@ -3214,7 +3146,7 @@
                               <Left>4.24392in</Left>
                               <Height>0.25in</Height>
                               <Width>0.7in</Width>
-                              <ZIndex>7</ZIndex>
+                              <ZIndex>5</ZIndex>
                               <Visibility>
                                 <Hidden>=Parameters!PrAgedTot.Value = 0 Or IIf(ReportItems!Textbox171.Value, False, True)</Hidden>
                               </Visibility>
@@ -3256,7 +3188,7 @@
                               <Top>2.8411in</Top>
                               <Height>0.25in</Height>
                               <Width>1.28334in</Width>
-                              <ZIndex>8</ZIndex>
+                              <ZIndex>6</ZIndex>
                               <Visibility>
                                 <Hidden>=IIf(ReportItems!Textbox171.Value, false, true)</Hidden>
                               </Visibility>
@@ -3298,7 +3230,7 @@
                               <Top>3.0911in</Top>
                               <Height>0.25in</Height>
                               <Width>1.28334in</Width>
-                              <ZIndex>9</ZIndex>
+                              <ZIndex>7</ZIndex>
                               <Visibility>
                                 <Hidden>=IIf(ReportItems!Textbox171.Value, false, true)</Hidden>
                               </Visibility>
@@ -3335,7 +3267,7 @@
                               <Left>3.25968cm</Left>
                               <Height>0.25in</Height>
                               <Width>5.94166in</Width>
-                              <ZIndex>10</ZIndex>
+                              <ZIndex>8</ZIndex>
                               <Visibility>
                                 <Hidden>=IIf(ReportItems!Textbox171.Value, false, true)</Hidden>
                               </Visibility>
@@ -3374,10 +3306,10 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox21</rd:DefaultName>
-                              <Top>2.08208in</Top>
+                              <Top>1.42335in</Top>
                               <Height>0.25in</Height>
                               <Width>1.5in</Width>
-                              <ZIndex>11</ZIndex>
+                              <ZIndex>9</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -3405,11 +3337,11 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>bank_name</rd:DefaultName>
-                              <Top>2.07721in</Top>
+                              <Top>1.41848in</Top>
                               <Left>1.5in</Left>
                               <Height>0.25in</Height>
                               <Width>1.94695in</Width>
-                              <ZIndex>12</ZIndex>
+                              <ZIndex>10</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -3445,10 +3377,10 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox23</rd:DefaultName>
-                              <Top>2.33208in</Top>
+                              <Top>1.67335in</Top>
                               <Height>0.25in</Height>
                               <Width>1.5in</Width>
-                              <ZIndex>13</ZIndex>
+                              <ZIndex>11</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -3476,11 +3408,11 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>bank_transit_num</rd:DefaultName>
-                              <Top>2.32721in</Top>
+                              <Top>1.66848in</Top>
                               <Left>1.5in</Left>
                               <Height>0.25in</Height>
                               <Width>1.94695in</Width>
-                              <ZIndex>14</ZIndex>
+                              <ZIndex>12</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -3516,10 +3448,10 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>Textbox25</rd:DefaultName>
-                              <Top>2.5911in</Top>
+                              <Top>1.93237in</Top>
                               <Height>0.25in</Height>
                               <Width>1.5in</Width>
-                              <ZIndex>15</ZIndex>
+                              <ZIndex>13</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -3547,11 +3479,11 @@
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>account</rd:DefaultName>
-                              <Top>2.57721in</Top>
+                              <Top>1.91848in</Top>
                               <Left>1.5in</Left>
                               <Height>0.25in</Height>
                               <Width>1.94695in</Width>
-                              <ZIndex>16</ZIndex>
+                              <ZIndex>14</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -4178,7 +4110,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>CustomerStatements</DataSetName>
-            <Height>9.89667in</Height>
+            <Height>8.72861in</Height>
             <Width>7.77in</Width>
             <Style>
               <Border>
@@ -4260,6 +4192,13 @@
               <Paragraphs>
                 <Paragraph>
                   <TextRuns>
+                    <TextRun>
+                      <Value>Remit To: </Value>
+                      <Style>
+                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value), "Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
                     <TextRun>
                       <Value>=Fields!office_addr_footer.Value</Value>
                       <Style>

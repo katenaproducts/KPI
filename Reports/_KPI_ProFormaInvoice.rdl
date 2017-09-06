@@ -2385,6 +2385,9 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox264</rd:DefaultName>
+                          <Visibility>
+                            <Hidden>true</Hidden>
+                          </Visibility>
                           <Style>
                             <Border>
                               <Color>White</Color>
@@ -2397,6 +2400,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -5935,7 +5939,7 @@ OR (IsNothing(Fields!due_date.Value) AND IsNothing(Fields!project_date.Value))</
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=ReportItems!estimate_response_rpt_title.Value</Value>
+                      <Value>Pro-Forma Invoice</Value>
                       <Style>
                         <FontSize>20pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -7085,6 +7089,6 @@ OR (IsNothing(Fields!due_date.Value) AND IsNothing(Fields!project_date.Value))</
   </ReportParameters>
   <Language>=Parameters!pLanguage.Value</Language>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportServerUrl>http://uscowsldb5/ReportServer_SL803</rd:ReportServerUrl>
+  <rd:ReportServerUrl>http://hkpidutlp01/ReportServer</rd:ReportServerUrl>
   <rd:ReportID>9d98fc10-dba4-40b4-8200-46fd4d1c8e9e</rd:ReportID>
 </Report>

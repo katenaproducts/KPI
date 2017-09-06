@@ -710,7 +710,7 @@
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.38542in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -869,9 +869,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Code.UpdateVar("co_num", First(Fields!co_num.Value))</Value>
                                   <Style>
-                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value), "Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                    <FontFamily>Code39HalfInch</FontFamily>
+                                    <FontSize>22pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -883,6 +884,7 @@
                             <Border>
                               <Style>None</Style>
                             </Border>
+                            <VerticalAlign>Bottom</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1465,198 +1467,6 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox20">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox20</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox21">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox21</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox22">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox22</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox24">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style />
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox24</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="sSalespersion">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Parameters!sSalesperson.Value</Value>
-                                  <Style>
-                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                                <TextRun>
-                                  <Value>:</Value>
-                                  <Style>
-                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <ZIndex>2</ZIndex>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox378">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Code.UpdateVar("salesman", Fields!salesman.Value)</Value>
-                                  <Style>
-                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox378</rd:DefaultName>
-                          <ZIndex>3</ZIndex>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                  </TablixCells>
-                </TablixRow>
-                <TablixRow>
-                  <Height>0.25in</Height>
-                  <TablixCells>
-                    <TablixCell>
-                      <CellContents>
                         <Rectangle Name="Rectangle7">
                           <ReportItems>
                             <Textbox Name="sRouteTo2">
@@ -1666,14 +1476,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>=Parameters!sRouteTo.Value</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value), "Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                        <FontWeight>Bold</FontWeight>
-                                      </Style>
-                                    </TextRun>
-                                    <TextRun>
-                                      <Value>:</Value>
+                                      <Value>Bill To:</Value>
                                       <Style>
                                         <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value), "Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
                                         <FontWeight>Bold</FontWeight>
@@ -1816,7 +1619,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>1.44809in</Height>
+                  <Height>1.61986in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -1881,6 +1684,47 @@
                                 <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
+                            <Textbox Name="shipdesc">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Ship Via</Value>
+                                      <Style>
+                                        <FontStyle>Italic</FontStyle>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>: </Value>
+                                      <Style />
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>=First(Fields!shipdesc.Value)</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>shipdesc</rd:DefaultName>
+                              <Top>1.36986in</Top>
+                              <Left>3.75662in</Left>
+                              <Height>0.25in</Height>
+                              <Width>3.06838in</Width>
+                              <ZIndex>2</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
                           </ReportItems>
                           <KeepTogether>true</KeepTogether>
                           <Style>
@@ -1905,146 +1749,6 @@
                     <TablixCell>
                       <CellContents>
                         <Rectangle Name="Rectangle6">
-                          <ReportItems>
-                            <Textbox Name="sRouteTo">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Parameters!sRouteTo.Value</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                        <FontWeight>Bold</FontWeight>
-                                      </Style>
-                                    </TextRun>
-                                    <TextRun>
-                                      <Value>:</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                        <FontWeight>Bold</FontWeight>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <Left>0.02061in</Left>
-                              <Height>0.25in</Height>
-                              <Width>1in</Width>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                            <Textbox Name="sShipTo">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Parameters!sShipTo.Value</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                        <FontWeight>Bold</FontWeight>
-                                      </Style>
-                                    </TextRun>
-                                    <TextRun>
-                                      <Value>:</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                        <FontWeight>Bold</FontWeight>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <Left>3.15833in</Left>
-                              <Height>0.25in</Height>
-                              <Width>1in</Width>
-                              <ZIndex>1</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                            <Textbox Name="cust_num2">
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Code.UpdateVar("cust_num", Fields!cust_num.Value)</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>cust_num</rd:DefaultName>
-                              <Left>1.0594in</Left>
-                              <Height>0.25in</Height>
-                              <Width>1in</Width>
-                              <ZIndex>2</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                            <Textbox Name="cust_seq2">
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Code.UpdateVar("cust_seq", Fields!cust_seq.Value)</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                        <Format>n0</Format>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style>
-                                    <TextAlign>Left</TextAlign>
-                                  </Style>
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>cust_seq</rd:DefaultName>
-                              <Left>4.15833in</Left>
-                              <Height>0.25in</Height>
-                              <Width>1.93887in</Width>
-                              <ZIndex>3</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                          </ReportItems>
                           <KeepTogether>true</KeepTogether>
                           <Style>
                             <Border>
@@ -2068,67 +1772,6 @@
                     <TablixCell>
                       <CellContents>
                         <Rectangle Name="Rectangle2">
-                          <ReportItems>
-                            <Textbox Name="bill_addr2">
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Code.UpdateVar("bill_addr", Fields!bill_addr.Value)</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>bill_addr</rd:DefaultName>
-                              <Left>0.47606in</Left>
-                              <Height>1.32in</Height>
-                              <Width>3.1in</Width>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                            <Textbox Name="ship_addr2">
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Code.UpdateVar("ship_addr", Fields!ship_addr.Value)</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>ship_addr</rd:DefaultName>
-                              <Left>3.725in</Left>
-                              <Height>1.32in</Height>
-                              <Width>3.1in</Width>
-                              <ZIndex>1</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                          </ReportItems>
                           <KeepTogether>true</KeepTogether>
                           <Style>
                             <Border>
@@ -2213,7 +1856,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>=Parameters!sLineRelease.Value</Value>
+                                      <Value>Line     Whse</Value>
                                       <Style>
                                         <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
                                         <FontWeight>Bold</FontWeight>
@@ -2331,72 +1974,6 @@
                                 <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
-                            <Textbox Name="sUnitPrice">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Parameters!sUnitPrice.Value</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                        <FontWeight>Bold</FontWeight>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style>
-                                    <TextAlign>Right</TextAlign>
-                                  </Style>
-                                </Paragraph>
-                              </Paragraphs>
-                              <Left>5.25278in</Left>
-                              <Height>0.25in</Height>
-                              <Width>1.21944in</Width>
-                              <ZIndex>4</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                            <Textbox Name="sNetAmount">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Parameters!sNetAmount.Value</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                        <FontWeight>Bold</FontWeight>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style>
-                                    <TextAlign>Right</TextAlign>
-                                  </Style>
-                                </Paragraph>
-                              </Paragraphs>
-                              <Left>6.48264in</Left>
-                              <Height>0.25in</Height>
-                              <Width>1.1868in</Width>
-                              <ZIndex>5</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
                           </ReportItems>
                           <KeepTogether>true</KeepTogether>
                           <Style>
@@ -2436,7 +2013,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.5in</Height>
+                  <Height>0.375in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -2483,6 +2060,7 @@
  Fields!qty_format.Value)</Value>
                                       <Style>
                                         <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                        <Format>0;(0)</Format>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
@@ -2495,74 +2073,6 @@
                               <Height>0.25in</Height>
                               <Width>0.97986in</Width>
                               <ZIndex>1</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                            <Textbox Name="price">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Format(Round(Iif(IsNothing(Fields!price.Value), 0, Fields!price.Value), 
-        Fields!CurrencyPricePlaces.Value), 
-Fields!CurrencyPriceFormat.Value)</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style>
-                                    <TextAlign>Right</TextAlign>
-                                  </Style>
-                                </Paragraph>
-                              </Paragraphs>
-                              <Left>5.25782in</Left>
-                              <Height>0.25in</Height>
-                              <Width>1.20556in</Width>
-                              <ZIndex>2</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                            <Textbox Name="net_amount">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Format(Round(Iif(IsNothing(Fields!net_amount.Value), 0, Fields!net_amount.Value), 
-        Fields!CurrencyPlaces.Value), 
- Fields!CurrencyFormat.Value)</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style>
-                                    <TextAlign>Right</TextAlign>
-                                  </Style>
-                                </Paragraph>
-                              </Paragraphs>
-                              <Left>6.48264in</Left>
-                              <Height>0.25in</Height>
-                              <Width>1.26981in</Width>
-                              <ZIndex>3</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -2589,41 +2099,10 @@ Fields!CurrencyPriceFormat.Value)</Value>
                                   <Style />
                                 </Paragraph>
                               </Paragraphs>
-                              <Top>0.25in</Top>
-                              <Left>2.68889in</Left>
+                              <Left>2.06389in</Left>
                               <Height>0.25in</Height>
-                              <Width>5.08111in</Width>
-                              <ZIndex>4</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                            <Textbox Name="cust_item">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Fields!cust_item.Value</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <Left>2.0229in</Left>
-                              <Height>0.25in</Height>
-                              <Width>1.20555in</Width>
-                              <ZIndex>5</ZIndex>
+                              <Width>2.69569in</Width>
+                              <ZIndex>2</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -2656,68 +2135,7 @@ Fields!CurrencyPriceFormat.Value)</Value>
                               <Left>0.025in</Left>
                               <Height>0.25in</Height>
                               <Width>0.4in</Width>
-                              <ZIndex>6</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                            <Textbox Name="cast_co_release">
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Fields!cast_co_release.Value</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>cast_co_release</rd:DefaultName>
-                              <Left>0.425in</Left>
-                              <Height>0.25in</Height>
-                              <Width>0.4in</Width>
-                              <ZIndex>7</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                            <Textbox Name="end_user">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=IIf(Parameters!PrintEndUserItem.Value &lt;&gt; 1, "", Fields!end_user.Value)</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value), "Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>end_user</rd:DefaultName>
-                              <Left>3.22845in</Left>
-                              <Height>0.25in</Height>
-                              <Width>1.03561in</Width>
-                              <ZIndex>8</ZIndex>
+                              <ZIndex>3</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -3454,77 +2872,6 @@ Fields!CurrencyPriceFormat.Value)</Value>
                                 </RightBorder>
                               </Style>
                             </Rectangle>
-                            <Textbox Name="Textbox393">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Fields!office_addr.Value</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>Textbox393</rd:DefaultName>
-                              <Top>0.40642in</Top>
-                              <Left>0.31749in</Left>
-                              <Height>1.5454in</Height>
-                              <Width>2.8558in</Width>
-                              <ZIndex>1</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                            <Textbox Name="sRemitTo">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Parameters!sRemitTo.Value</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value), "Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                        <FontWeight>Bold</FontWeight>
-                                      </Style>
-                                    </TextRun>
-                                    <TextRun>
-                                      <Value>:</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value), "Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                        <FontWeight>Bold</FontWeight>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <Top>0.29148cm</Top>
-                              <Left>0.31749in</Left>
-                              <Height>0.25in</Height>
-                              <Width>1in</Width>
-                              <ZIndex>2</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
                             <Textbox Name="sTerms2">
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
@@ -3553,7 +2900,7 @@ Fields!CurrencyPriceFormat.Value)</Value>
                               <Left>0.31749in</Left>
                               <Height>0.25in</Height>
                               <Width>0.97222in</Width>
-                              <ZIndex>3</ZIndex>
+                              <ZIndex>1</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -3584,7 +2931,7 @@ Fields!CurrencyPriceFormat.Value)</Value>
                               <Left>1.40149in</Left>
                               <Height>0.25in</Height>
                               <Width>1.04122in</Width>
-                              <ZIndex>4</ZIndex>
+                              <ZIndex>2</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -3615,7 +2962,7 @@ Fields!CurrencyPriceFormat.Value)</Value>
                               <Left>0.08027cm</Left>
                               <Height>0.25in</Height>
                               <Width>4.30524in</Width>
-                              <ZIndex>5</ZIndex>
+                              <ZIndex>3</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -3646,7 +2993,7 @@ Fields!CurrencyPriceFormat.Value)</Value>
                               <Left>0.08027cm</Left>
                               <Height>0.25in</Height>
                               <Width>4.30524in</Width>
-                              <ZIndex>6</ZIndex>
+                              <ZIndex>4</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -3677,7 +3024,7 @@ Fields!CurrencyPriceFormat.Value)</Value>
                               <Left>0.08027cm</Left>
                               <Height>0.25in</Height>
                               <Width>4.30524in</Width>
-                              <ZIndex>7</ZIndex>
+                              <ZIndex>5</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -3718,7 +3065,7 @@ Fields!CurrencyPriceFormat.Value)</Value>
                               <Left>4.64458in</Left>
                               <Height>0.25in</Height>
                               <Width>1.68843in</Width>
-                              <ZIndex>8</ZIndex>
+                              <ZIndex>6</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -3753,7 +3100,7 @@ Fields!CurrencyPriceFormat.Value)</Value>
                               <Left>6.38023in</Left>
                               <Height>0.25in</Height>
                               <Width>0.9in</Width>
-                              <ZIndex>9</ZIndex>
+                              <ZIndex>7</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -3787,7 +3134,10 @@ Fields!CurrencyPriceFormat.Value)</Value>
                               <Left>4.64458in</Left>
                               <Height>0.25in</Height>
                               <Width>1.68843in</Width>
-                              <ZIndex>10</ZIndex>
+                              <ZIndex>8</ZIndex>
+                              <Visibility>
+                                <Hidden>=Fields!order_disc.Value=0</Hidden>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -3822,7 +3172,10 @@ Fields!CurrencyPriceFormat.Value)</Value>
                               <Left>6.38023in</Left>
                               <Height>0.25in</Height>
                               <Width>0.9in</Width>
-                              <ZIndex>11</ZIndex>
+                              <ZIndex>9</ZIndex>
+                              <Visibility>
+                                <Hidden>=Fields!order_disc.Value = 0</Hidden>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -3863,7 +3216,7 @@ Fields!CurrencyPriceFormat.Value)</Value>
                               <Left>4.64458in</Left>
                               <Height>0.25in</Height>
                               <Width>1.68843in</Width>
-                              <ZIndex>12</ZIndex>
+                              <ZIndex>10</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -3901,7 +3254,7 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
                               <Left>6.38023in</Left>
                               <Height>0.25in</Height>
                               <Width>0.9in</Width>
-                              <ZIndex>13</ZIndex>
+                              <ZIndex>11</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -3935,7 +3288,7 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
                               <Left>4.64458in</Left>
                               <Height>0.25in</Height>
                               <Width>1.68843in</Width>
-                              <ZIndex>14</ZIndex>
+                              <ZIndex>12</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -3970,7 +3323,7 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
                               <Left>6.38023in</Left>
                               <Height>0.25in</Height>
                               <Width>0.9in</Width>
-                              <ZIndex>15</ZIndex>
+                              <ZIndex>13</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -4004,7 +3357,7 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
                               <Left>4.64458in</Left>
                               <Height>0.25in</Height>
                               <Width>1.68843in</Width>
-                              <ZIndex>16</ZIndex>
+                              <ZIndex>14</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -4041,7 +3394,7 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
                               <Left>6.38023in</Left>
                               <Height>0.25in</Height>
                               <Width>0.9in</Width>
-                              <ZIndex>17</ZIndex>
+                              <ZIndex>15</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -4082,7 +3435,7 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
                               <Left>4.64458in</Left>
                               <Height>0.25in</Height>
                               <Width>1.68843in</Width>
-                              <ZIndex>18</ZIndex>
+                              <ZIndex>16</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -4118,7 +3471,7 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
                               <Left>6.38023in</Left>
                               <Height>0.25in</Height>
                               <Width>0.9in</Width>
-                              <ZIndex>19</ZIndex>
+                              <ZIndex>17</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -4159,7 +3512,7 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
                               <Left>4.64458in</Left>
                               <Height>0.25in</Height>
                               <Width>1.68843in</Width>
-                              <ZIndex>20</ZIndex>
+                              <ZIndex>18</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -4194,7 +3547,7 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
                               <Left>6.38023in</Left>
                               <Height>0.25in</Height>
                               <Width>0.9in</Width>
-                              <ZIndex>21</ZIndex>
+                              <ZIndex>19</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -4235,7 +3588,7 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
                               <Left>4.64458in</Left>
                               <Height>0.25in</Height>
                               <Width>1.68843in</Width>
-                              <ZIndex>22</ZIndex>
+                              <ZIndex>20</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -4270,7 +3623,7 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
                               <Left>6.38023in</Left>
                               <Height>0.25in</Height>
                               <Width>0.9in</Width>
-                              <ZIndex>23</ZIndex>
+                              <ZIndex>21</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -4311,7 +3664,7 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
                               <Left>4.64458in</Left>
                               <Height>0.25in</Height>
                               <Width>1.68843in</Width>
-                              <ZIndex>24</ZIndex>
+                              <ZIndex>22</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -4349,7 +3702,7 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
                               <Left>6.38023in</Left>
                               <Height>0.25in</Height>
                               <Width>0.9in</Width>
-                              <ZIndex>25</ZIndex>
+                              <ZIndex>23</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -4390,7 +3743,7 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
                               <Left>4.64458in</Left>
                               <Height>0.25in</Height>
                               <Width>1.68843in</Width>
-                              <ZIndex>26</ZIndex>
+                              <ZIndex>24</ZIndex>
                               <Visibility>
                                 <Hidden>=Parameters!PrintEuroValue.Value &lt;&gt; 1</Hidden>
                               </Visibility>
@@ -4428,7 +3781,7 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
                               <Left>6.38023in</Left>
                               <Height>0.25in</Height>
                               <Width>0.9in</Width>
-                              <ZIndex>27</ZIndex>
+                              <ZIndex>25</ZIndex>
                               <Visibility>
                                 <Hidden>=Parameters!PrintEuroValue.Value &lt;&gt; 1</Hidden>
                               </Visibility>
@@ -4464,7 +3817,7 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
                               <Left>7.28023in</Left>
                               <Height>0.25in</Height>
                               <Width>0.47099in</Width>
-                              <ZIndex>28</ZIndex>
+                              <ZIndex>26</ZIndex>
                               <Visibility>
                                 <Hidden>=Parameters!PrintCurrencyCode.Value &lt;&gt; 1</Hidden>
                               </Visibility>
@@ -4500,7 +3853,7 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
                               <Left>7.28023in</Left>
                               <Height>0.25in</Height>
                               <Width>0.47222in</Width>
-                              <ZIndex>29</ZIndex>
+                              <ZIndex>27</ZIndex>
                               <Visibility>
                                 <Hidden>=Parameters!PrintCurrencyCode.Value &lt;&gt; 1</Hidden>
                               </Visibility>
@@ -4536,226 +3889,10 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
                               <Left>7.28023in</Left>
                               <Height>0.25in</Height>
                               <Width>0.47099in</Width>
-                              <ZIndex>30</ZIndex>
+                              <ZIndex>28</ZIndex>
                               <Visibility>
                                 <Hidden>=Parameters!PrintEuroValue.Value &lt;&gt; 1 Or Parameters!PrintCurrencyCode.Value &lt;&gt; 1</Hidden>
                               </Visibility>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                            <Textbox Name="Textbox27">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Parameters!sWireTo.Value</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value), "Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                      </Style>
-                                    </TextRun>
-                                    <TextRun>
-                                      <Value>:</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value), "Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style>
-                                    <TextAlign>Left</TextAlign>
-                                  </Style>
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>Textbox27</rd:DefaultName>
-                              <Top>2.03633in</Top>
-                              <Left>0.31749in</Left>
-                              <Height>0.25in</Height>
-                              <Width>1.5in</Width>
-                              <ZIndex>31</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                            <Textbox Name="Textbox29">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Parameters!sBankTransitNumber.Value</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value), "Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                      </Style>
-                                    </TextRun>
-                                    <TextRun>
-                                      <Value>:</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value), "Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style>
-                                    <TextAlign>Left</TextAlign>
-                                  </Style>
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>Textbox29</rd:DefaultName>
-                              <Top>2.28633in</Top>
-                              <Left>0.31749in</Left>
-                              <Height>0.25in</Height>
-                              <Width>1.5in</Width>
-                              <ZIndex>32</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                            <Textbox Name="Textbox37">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Parameters!sAccountNumber.Value</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value), "Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                      </Style>
-                                    </TextRun>
-                                    <TextRun>
-                                      <Value>:</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value), "Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style>
-                                    <TextAlign>Left</TextAlign>
-                                  </Style>
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>Textbox37</rd:DefaultName>
-                              <Top>2.53633in</Top>
-                              <Left>0.31749in</Left>
-                              <Height>0.25in</Height>
-                              <Width>1.5in</Width>
-                              <ZIndex>33</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                            <Textbox Name="bank_name">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Fields!bank_name.Value</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value), "Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>bank_name</rd:DefaultName>
-                              <Top>2.03633in</Top>
-                              <Left>1.81749in</Left>
-                              <Height>0.25in</Height>
-                              <Width>1.3558in</Width>
-                              <ZIndex>34</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                            <Textbox Name="bank_transit_num">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Fields!bank_transit_num.Value</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value), "Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>bank_transit_num</rd:DefaultName>
-                              <Top>2.28633in</Top>
-                              <Left>1.81749in</Left>
-                              <Height>0.25in</Height>
-                              <Width>1.3558in</Width>
-                              <ZIndex>35</ZIndex>
-                              <Style>
-                                <Border>
-                                  <Style>None</Style>
-                                </Border>
-                                <PaddingLeft>2pt</PaddingLeft>
-                                <PaddingRight>2pt</PaddingRight>
-                                <PaddingTop>2pt</PaddingTop>
-                                <PaddingBottom>2pt</PaddingBottom>
-                              </Style>
-                            </Textbox>
-                            <Textbox Name="bank_acct_no">
-                              <CanGrow>true</CanGrow>
-                              <KeepTogether>true</KeepTogether>
-                              <Paragraphs>
-                                <Paragraph>
-                                  <TextRuns>
-                                    <TextRun>
-                                      <Value>=Fields!bank_acct_no.Value</Value>
-                                      <Style>
-                                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value), "Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                      </Style>
-                                    </TextRun>
-                                  </TextRuns>
-                                  <Style />
-                                </Paragraph>
-                              </Paragraphs>
-                              <rd:DefaultName>bank_acct_no</rd:DefaultName>
-                              <Top>2.53633in</Top>
-                              <Left>1.81749in</Left>
-                              <Height>0.25in</Height>
-                              <Width>1.3558in</Width>
-                              <ZIndex>36</ZIndex>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -4897,9 +4034,6 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
                                       </SortExpressions>
                                       <TablixMembers>
                                         <TablixMember>
-                                          <KeepTogether>true</KeepTogether>
-                                        </TablixMember>
-                                        <TablixMember>
                                           <Group Name="co_num6">
                                             <GroupExpressions>
                                               <GroupExpression>=Fields!co_num.Value</GroupExpression>
@@ -5040,7 +4174,7 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
             </TablixRowHierarchy>
             <DataSetName>OrderVerificationDetail</DataSetName>
             <Top>5.6in</Top>
-            <Height>10.93227in</Height>
+            <Height>10.86446in</Height>
             <Width>7.77in</Width>
             <Style>
               <Border>
@@ -7964,7 +7098,7 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Parameters!fOrderVerificationReport.Value</Value>
+                      <Value>Order Packing Slip</Value>
                       <Style>
                         <FontStyle>Italic</FontStyle>
                         <FontSize>20pt</FontSize>
@@ -8056,6 +7190,13 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
               <Paragraphs>
                 <Paragraph>
                   <TextRuns>
+                    <TextRun>
+                      <Value>Remit To:   </Value>
+                      <Style>
+                        <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value), "Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
                     <TextRun>
                       <Value>=Fields!office_addr_footer.Value</Value>
                       <Style>
@@ -9918,6 +9059,6 @@ Format(Round(Fields!SumTotalSurcharge.Value, Fields!CurrencyTotPlaces.Value), Fi
 </Code>
   <Language>=Parameters!pLanguage.Value</Language>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportServerUrl>http://uscowsldb6/ReportServer_SL804</rd:ReportServerUrl>
+  <rd:ReportServerUrl>http://hkpidutlp01/ReportServer</rd:ReportServerUrl>
   <rd:ReportID>5fd3e7f2-b732-4cac-b13c-0a61e5e90d2a</rd:ReportID>
 </Report>

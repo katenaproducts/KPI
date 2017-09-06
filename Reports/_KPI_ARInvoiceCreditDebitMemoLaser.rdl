@@ -1614,63 +1614,11 @@ Parameters!DocType.Value="D", Parameters!sDebitMemo.Value))</Value>
                                               <PaddingBottom>2pt</PaddingBottom>
                                             </Style>
                                           </Textbox>
+                                          <ColSpan>3</ColSpan>
                                         </CellContents>
                                       </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox23">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value>=Parameters!sPkgs.Value</Value>
-                                                    <Style>
-                                                      <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                                      <FontWeight>Bold</FontWeight>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Center</TextAlign>
-                                                </Style>
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox21</rd:DefaultName>
-                                            <Style>
-                                              <Border>
-                                                <Style>Solid</Style>
-                                              </Border>
-                                              <TopBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </TopBorder>
-                                              <BottomBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </BottomBorder>
-                                              <LeftBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </LeftBorder>
-                                              <RightBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </RightBorder>
-                                              <BackgroundColor>Silver</BackgroundColor>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
+                                      <TablixCell />
+                                      <TablixCell />
                                       <TablixCell>
                                         <CellContents>
                                           <Textbox Name="Textbox26">
@@ -1680,119 +1628,9 @@ Parameters!DocType.Value="D", Parameters!sDebitMemo.Value))</Value>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=Parameters!sPPD.Value</Value>
-                                                    <Style>
-                                                      <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                                      <FontWeight>Bold</FontWeight>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Center</TextAlign>
-                                                </Style>
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox22</rd:DefaultName>
-                                            <Style>
-                                              <Border>
-                                                <Style>Solid</Style>
-                                              </Border>
-                                              <TopBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </TopBorder>
-                                              <BottomBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </BottomBorder>
-                                              <LeftBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </LeftBorder>
-                                              <RightBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </RightBorder>
-                                              <BackgroundColor>Silver</BackgroundColor>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox28">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value>=Parameters!sWeight.Value</Value>
-                                                    <Style>
-                                                      <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                                      <FontWeight>Bold</FontWeight>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Center</TextAlign>
-                                                </Style>
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox25</rd:DefaultName>
-                                            <Style>
-                                              <Border>
-                                                <Style>Solid</Style>
-                                              </Border>
-                                              <TopBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </TopBorder>
-                                              <BottomBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </BottomBorder>
-                                              <LeftBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </LeftBorder>
-                                              <RightBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </RightBorder>
-                                              <BackgroundColor>Silver</BackgroundColor>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox11">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
                                                     <Value>=Parameters!sShipVia.Value</Value>
                                                     <Style>
-                                                      <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                                      <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value), "Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
                                                       <FontWeight>Bold</FontWeight>
                                                     </Style>
                                                   </TextRun>
@@ -1834,8 +1672,10 @@ Parameters!DocType.Value="D", Parameters!sDebitMemo.Value))</Value>
                                               <PaddingBottom>2pt</PaddingBottom>
                                             </Style>
                                           </Textbox>
+                                          <ColSpan>2</ColSpan>
                                         </CellContents>
                                       </TablixCell>
+                                      <TablixCell />
                                       <TablixCell>
                                         <CellContents>
                                           <Textbox Name="Textbox16">
@@ -1911,7 +1751,9 @@ Parameters!DocType.Value="D", Parameters!sDebitMemo.Value))</Value>
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>
-                                                <Style />
+                                                <Style>
+                                                  <TextAlign>Center</TextAlign>
+                                                </Style>
                                               </Paragraph>
                                             </Paragraphs>
                                             <ZIndex>20</ZIndex>
@@ -1942,7 +1784,9 @@ Parameters!DocType.Value="D", Parameters!sDebitMemo.Value))</Value>
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>
-                                                <Style />
+                                                <Style>
+                                                  <TextAlign>Center</TextAlign>
+                                                </Style>
                                               </Paragraph>
                                             </Paragraphs>
                                             <ZIndex>21</ZIndex>
@@ -1976,144 +1820,11 @@ Parameters!DocType.Value="D", Parameters!sDebitMemo.Value))</Value>
                                               <PaddingBottom>2pt</PaddingBottom>
                                             </Style>
                                           </Textbox>
+                                          <ColSpan>3</ColSpan>
                                         </CellContents>
                                       </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="inv_pkgs2">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value>=Code.UpdateVar("inv_co_pkgs", Iif(Fields!inv_pkgs.Value =0, Nothing, Fields!inv_pkgs.Value))</Value>
-                                                    <Style>
-                                                      <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                                      <Format>n0</Format>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Right</TextAlign>
-                                                </Style>
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <ZIndex>22</ZIndex>
-                                            <Style>
-                                              <Border>
-                                                <Style>Solid</Style>
-                                              </Border>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="inv_prepaid2">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value>=Code.UpdateVar("inv_co_prepaid", Fields!inv_prepaid.Value)</Value>
-                                                    <Style>
-                                                      <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style />
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <ZIndex>23</ZIndex>
-                                            <Style>
-                                              <Border>
-                                                <Style>Solid</Style>
-                                              </Border>
-                                              <TopBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </TopBorder>
-                                              <BottomBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </BottomBorder>
-                                              <LeftBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </LeftBorder>
-                                              <RightBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </RightBorder>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="inv_weight2">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value>=Code.UpdateVar("inv_co_weight", Fields!inv_weight.Value)</Value>
-                                                    <Style>
-                                                      <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style />
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <ZIndex>24</ZIndex>
-                                            <Style>
-                                              <Border>
-                                                <Style>Solid</Style>
-                                              </Border>
-                                              <TopBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </TopBorder>
-                                              <BottomBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </BottomBorder>
-                                              <LeftBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </LeftBorder>
-                                              <RightBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </RightBorder>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
+                                      <TablixCell />
+                                      <TablixCell />
                                       <TablixCell>
                                         <CellContents>
                                           <Textbox Name="inv_shipvia2">
@@ -2129,7 +1840,9 @@ Parameters!DocType.Value="D", Parameters!sDebitMemo.Value))</Value>
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>
-                                                <Style />
+                                                <Style>
+                                                  <TextAlign>Center</TextAlign>
+                                                </Style>
                                               </Paragraph>
                                             </Paragraphs>
                                             <ZIndex>25</ZIndex>
@@ -2163,8 +1876,10 @@ Parameters!DocType.Value="D", Parameters!sDebitMemo.Value))</Value>
                                               <PaddingBottom>2pt</PaddingBottom>
                                             </Style>
                                           </Textbox>
+                                          <ColSpan>2</ColSpan>
                                         </CellContents>
                                       </TablixCell>
+                                      <TablixCell />
                                       <TablixCell>
                                         <CellContents>
                                           <Textbox Name="inv_terms2">
@@ -2180,7 +1895,9 @@ Parameters!DocType.Value="D", Parameters!sDebitMemo.Value))</Value>
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>
-                                                <Style />
+                                                <Style>
+                                                  <TextAlign>Center</TextAlign>
+                                                </Style>
                                               </Paragraph>
                                             </Paragraphs>
                                             <ZIndex>26</ZIndex>
@@ -2309,118 +2026,11 @@ Parameters!DocType.Value="D", Parameters!sDebitMemo.Value))</Value>
                                               <PaddingBottom>2pt</PaddingBottom>
                                             </Style>
                                           </Textbox>
+                                          <ColSpan>3</ColSpan>
                                         </CellContents>
                                       </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox4624">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style>
-                                                      <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                                      <FontWeight>Bold</FontWeight>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Center</TextAlign>
-                                                </Style>
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox4624</rd:DefaultName>
-                                            <Style>
-                                              <Border>
-                                                <Style>Solid</Style>
-                                              </Border>
-                                              <TopBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </TopBorder>
-                                              <BottomBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </BottomBorder>
-                                              <LeftBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </LeftBorder>
-                                              <RightBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </RightBorder>
-                                              <BackgroundColor>Silver</BackgroundColor>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox4625">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style>
-                                                      <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                                      <FontWeight>Bold</FontWeight>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Center</TextAlign>
-                                                </Style>
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox4625</rd:DefaultName>
-                                            <Style>
-                                              <Border>
-                                                <Style>Solid</Style>
-                                              </Border>
-                                              <TopBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </TopBorder>
-                                              <BottomBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </BottomBorder>
-                                              <LeftBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </LeftBorder>
-                                              <RightBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </RightBorder>
-                                              <BackgroundColor>Silver</BackgroundColor>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
+                                      <TablixCell />
+                                      <TablixCell />
                                       <TablixCell>
                                         <CellContents>
                                           <Textbox Name="Textbox4626">
@@ -2474,63 +2084,10 @@ Parameters!DocType.Value="D", Parameters!sDebitMemo.Value))</Value>
                                               <PaddingBottom>2pt</PaddingBottom>
                                             </Style>
                                           </Textbox>
+                                          <ColSpan>2</ColSpan>
                                         </CellContents>
                                       </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox4627">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style>
-                                                      <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                                      <FontWeight>Bold</FontWeight>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Center</TextAlign>
-                                                </Style>
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox4627</rd:DefaultName>
-                                            <Style>
-                                              <Border>
-                                                <Style>Solid</Style>
-                                              </Border>
-                                              <TopBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </TopBorder>
-                                              <BottomBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </BottomBorder>
-                                              <LeftBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </LeftBorder>
-                                              <RightBorder>
-                                                <Color>Black</Color>
-                                                <Style>Solid</Style>
-                                                <Width>1pt</Width>
-                                              </RightBorder>
-                                              <BackgroundColor>Silver</BackgroundColor>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
+                                      <TablixCell />
                                       <TablixCell>
                                         <CellContents>
                                           <Textbox Name="Textbox4628">
@@ -2658,18 +2215,21 @@ Parameters!DocType.Value="D", Parameters!sDebitMemo.Value))</Value>
                                   <Value>=iif(Parameters!DocType.Value = "C", Parameters!sCreditMemo.Value, iif(Parameters!DocType.Value = "D",Parameters!sDebitMemo.Value,Nothing)) + ": " + Fields!inv_num.Value &amp; "-" &amp; Format(Fields!inv_seq.Value,"0") + Parameters!sForInvoice.Value</Value>
                                   <Style>
                                     <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                    <FontSize>12pt</FontSize>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value> :  </Value>
                                   <Style>
                                     <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                    <FontSize>12pt</FontSize>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value>=Fields!apply_to_inv_num.Value</Value>
                                   <Style>
                                     <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                    <FontSize>12pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2689,226 +2249,20 @@ Parameters!DocType.Value="D", Parameters!sDebitMemo.Value))</Value>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <ColSpan>5</ColSpan>
+                        <ColSpan>12</ColSpan>
                       </CellContents>
                     </TablixCell>
                     <TablixCell />
                     <TablixCell />
                     <TablixCell />
                     <TablixCell />
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox10">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox10</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox37">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox39">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox39</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox34">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox47">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox47</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox35">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox36">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -4314,11 +3668,14 @@ Parameters!DocType.Value="D", Parameters!sDebitMemo.Value))</Value>
                                 </Paragraph>
                               </Paragraphs>
                               <rd:DefaultName>sSalesTax2</rd:DefaultName>
-                              <Top>1in</Top>
+                              <Top>0.98741in</Top>
                               <Left>4.9093in</Left>
                               <Height>0.25in</Height>
                               <Width>1.39385in</Width>
                               <ZIndex>9</ZIndex>
+                              <Visibility>
+                                <Hidden>true</Hidden>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -4662,6 +4019,9 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                               <Height>0.25in</Height>
                               <Width>1.35167in</Width>
                               <ZIndex>4</ZIndex>
+                              <Visibility>
+                                <Hidden>true</Hidden>
+                              </Visibility>
                               <Style>
                                 <Border>
                                   <Style>None</Style>
@@ -4893,40 +4253,15 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
         <Height>7.93108in</Height>
         <Style />
       </Body>
-      <Width>7.77003in</Width>
+      <Width>7.79781in</Width>
       <Page>
         <PageHeader>
-          <Height>4.675in</Height>
+          <Height>4.68881in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
             <Rectangle Name="Rectangle2">
               <ReportItems>
-                <Textbox Name="inv_addr6">
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>=Code.UpdateVar("invoice_addr", reportitems!inv_addr3.value)</Value>
-                          <Style>
-                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style />
-                    </Paragraph>
-                  </Paragraphs>
-                  <Top>0.01in</Top>
-                  <Left>0.083in</Left>
-                  <Height>1.32in</Height>
-                  <Width>3in</Width>
-                  <Style>
-                    <Border>
-                      <Style>None</Style>
-                    </Border>
-                  </Style>
-                </Textbox>
                 <Textbox Name="inv_numseq3">
                   <CanGrow>true</CanGrow>
                   <KeepTogether>true</KeepTogether>
@@ -4945,10 +4280,10 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Left>6.11298in</Left>
+                  <Top>0.38542in</Top>
+                  <Left>6.14332in</Left>
                   <Height>0.157in</Height>
                   <Width>1.417in</Width>
-                  <ZIndex>1</ZIndex>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -4974,11 +4309,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>0.314in</Top>
-                  <Left>6.11298in</Left>
+                  <Top>0.58417in</Top>
+                  <Left>6.14332in</Left>
                   <Height>0.157in</Height>
                   <Width>1.4in</Width>
-                  <ZIndex>2</ZIndex>
+                  <ZIndex>1</ZIndex>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5003,11 +4338,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>0.471in</Top>
-                  <Left>6.11298in</Left>
+                  <Top>0.85642in</Top>
+                  <Left>6.14332in</Left>
                   <Height>0.157in</Height>
                   <Width>0.8in</Width>
-                  <ZIndex>3</ZIndex>
+                  <ZIndex>2</ZIndex>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5024,17 +4359,20 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                           <Value>=Code.UpdateVar("doc_type",reportitems!DocType2.value)</Value>
                           <Style>
                             <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                            <FontWeight>Bold</FontWeight>
                           </Style>
                         </TextRun>
                       </TextRuns>
-                      <Style />
+                      <Style>
+                        <TextAlign>Right</TextAlign>
+                      </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>0.628in</Top>
-                  <Left>6.11298in</Left>
+                  <Top>0.37161in</Top>
+                  <Left>4.61298in</Left>
                   <Height>0.157in</Height>
                   <Width>1.4in</Width>
-                  <ZIndex>4</ZIndex>
+                  <ZIndex>3</ZIndex>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5060,11 +4398,14 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>1.25in</Top>
+                  <Top>1.26381in</Top>
                   <Left>3.2in</Left>
                   <Height>0.157in</Height>
                   <Width>1in</Width>
-                  <ZIndex>5</ZIndex>
+                  <ZIndex>4</ZIndex>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5089,11 +4430,14 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>1.25in</Top>
+                  <Top>1.26381in</Top>
                   <Left>4.2in</Left>
                   <Height>0.157in</Height>
                   <Width>3.57in</Width>
-                  <ZIndex>6</ZIndex>
+                  <ZIndex>5</ZIndex>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5119,11 +4463,14 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>1.407in</Top>
+                  <Top>1.42081in</Top>
                   <Left>3.20003in</Left>
                   <Height>0.157in</Height>
                   <Width>1in</Width>
-                  <ZIndex>7</ZIndex>
+                  <ZIndex>6</ZIndex>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5148,11 +4495,14 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>1.407in</Top>
+                  <Top>1.42081in</Top>
                   <Left>4.20003in</Left>
                   <Height>0.157in</Height>
                   <Width>3.57in</Width>
-                  <ZIndex>8</ZIndex>
+                  <ZIndex>7</ZIndex>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5177,11 +4527,14 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>1.721in</Top>
-                  <Left>4.20003in</Left>
+                  <Top>1.73481in</Top>
+                  <Left>4.22781in</Left>
                   <Height>0.157in</Height>
                   <Width>3.57in</Width>
-                  <ZIndex>9</ZIndex>
+                  <ZIndex>8</ZIndex>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5207,11 +4560,14 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>1.721in</Top>
+                  <Top>1.73481in</Top>
                   <Left>3.20003in</Left>
                   <Height>0.157in</Height>
                   <Width>1in</Width>
-                  <ZIndex>10</ZIndex>
+                  <ZIndex>9</ZIndex>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5237,11 +4593,14 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>1.564in</Top>
+                  <Top>1.57781in</Top>
                   <Left>3.2in</Left>
                   <Height>0.157in</Height>
                   <Width>1in</Width>
-                  <ZIndex>11</ZIndex>
+                  <ZIndex>10</ZIndex>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5266,11 +4625,14 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>1.564in</Top>
+                  <Top>1.57781in</Top>
                   <Left>4.2in</Left>
                   <Height>0.157in</Height>
                   <Width>3.57in</Width>
-                  <ZIndex>12</ZIndex>
+                  <ZIndex>11</ZIndex>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5293,11 +4655,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       <Style />
                     </Paragraph>
                   </Paragraphs>
-                  <Top>2.215in</Top>
+                  <Top>2.22881in</Top>
                   <Left>1in</Left>
                   <Height>0.157in</Height>
                   <Width>0.7in</Width>
-                  <ZIndex>13</ZIndex>
+                  <ZIndex>12</ZIndex>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5319,11 +4681,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       <Style />
                     </Paragraph>
                   </Paragraphs>
-                  <Top>2.38589in</Top>
+                  <Top>2.3997in</Top>
                   <Left>1in</Left>
                   <Height>1.32in</Height>
                   <Width>2.5in</Width>
-                  <ZIndex>14</ZIndex>
+                  <ZIndex>13</ZIndex>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5346,11 +4708,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       <Style />
                     </Paragraph>
                   </Paragraphs>
-                  <Top>2.215in</Top>
+                  <Top>2.22881in</Top>
                   <Left>4.3in</Left>
                   <Height>0.157in</Height>
                   <Width>1in</Width>
-                  <ZIndex>15</ZIndex>
+                  <ZIndex>14</ZIndex>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5372,11 +4734,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       <Style />
                     </Paragraph>
                   </Paragraphs>
-                  <Top>2.38589in</Top>
+                  <Top>2.3997in</Top>
                   <Left>4.3in</Left>
                   <Height>1.32in</Height>
                   <Width>3in</Width>
-                  <ZIndex>16</ZIndex>
+                  <ZIndex>15</ZIndex>
                   <Visibility>
                     <Hidden>=isNothing(Fields!inv_cust_seq.Value) Or Fields!inv_cust_seq.Value = ""</Hidden>
                   </Visibility>
@@ -5412,11 +4774,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>3.775in</Top>
+                  <Top>3.78881in</Top>
                   <Left>0.8in</Left>
                   <Height>0.2in</Height>
                   <Width>0.5in</Width>
-                  <ZIndex>17</ZIndex>
+                  <ZIndex>16</ZIndex>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5441,174 +4803,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>3.775in</Top>
+                  <Top>3.78881in</Top>
                   <Left>1.4in</Left>
                   <Height>0.2in</Height>
                   <Width>2.5in</Width>
-                  <ZIndex>18</ZIndex>
-                  <Style>
-                    <Border>
-                      <Style>None</Style>
-                    </Border>
-                  </Style>
-                </Textbox>
-                <Rectangle Name="Rectangle15">
-                  <ReportItems>
-                    <Textbox Name="sCurrency3">
-                      <CanGrow>true</CanGrow>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Parameters!sCurrency.Value</Value>
-                              <Style>
-                                <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value>:</Value>
-                              <Style>
-                                <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Right</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <Height>0.157in</Height>
-                      <Width>1in</Width>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                      </Style>
-                    </Textbox>
-                    <Textbox Name="inv_curr_code3">
-                      <CanGrow>true</CanGrow>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Code.UpdateVar("currency",reportitems!inv_curr_code2.value)</Value>
-                              <Style>
-                                <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Left</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <Left>1in</Left>
-                      <Height>0.157in</Height>
-                      <Width>1.1in</Width>
-                      <ZIndex>1</ZIndex>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                      </Style>
-                    </Textbox>
-                  </ReportItems>
-                  <KeepTogether>true</KeepTogether>
-                  <Top>1.89189in</Top>
-                  <Left>4.81298in</Left>
-                  <Height>0.157in</Height>
-                  <Width>2.2in</Width>
-                  <ZIndex>19</ZIndex>
-                  <Style>
-                    <Border>
-                      <Style>None</Style>
-                    </Border>
-                  </Style>
-                </Rectangle>
-                <Textbox Name="Textbox214">
-                  <CanGrow>true</CanGrow>
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>=Globals!PageNumber &amp; "  " &amp; Parameters!sOf.Value &amp; "  " &amp; Globals!TotalPages</Value>
-                          <Style>
-                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style />
-                    </Paragraph>
-                  </Paragraphs>
-                  <Top>0.157in</Top>
-                  <Left>6.11298in</Left>
-                  <Height>0.157in</Height>
-                  <Width>1.4in</Width>
-                  <ZIndex>20</ZIndex>
-                  <Style>
-                    <Border>
-                      <Style>None</Style>
-                    </Border>
-                  </Style>
-                </Textbox>
-                <Textbox Name="sInvoice2">
-                  <CanGrow>true</CanGrow>
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>=Parameters!sInvoice.Value</Value>
-                          <Style>
-                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                            <FontWeight>Bold</FontWeight>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style>
-                        <TextAlign>Right</TextAlign>
-                      </Style>
-                    </Paragraph>
-                  </Paragraphs>
-                  <rd:DefaultName>sInvoice</rd:DefaultName>
-                  <Left>5.21298in</Left>
-                  <Height>0.157in</Height>
-                  <Width>0.8in</Width>
-                  <ZIndex>21</ZIndex>
-                  <Style>
-                    <Border>
-                      <Style>None</Style>
-                    </Border>
-                  </Style>
-                </Textbox>
-                <Textbox Name="sPage2">
-                  <CanGrow>true</CanGrow>
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>=Parameters!sPage.Value</Value>
-                          <Style>
-                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                            <FontWeight>Bold</FontWeight>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style>
-                        <TextAlign>Right</TextAlign>
-                      </Style>
-                    </Paragraph>
-                  </Paragraphs>
-                  <rd:DefaultName>sPage</rd:DefaultName>
-                  <Top>0.15708in</Top>
-                  <Left>5.51298in</Left>
-                  <Height>0.157in</Height>
-                  <Width>0.5in</Width>
-                  <ZIndex>22</ZIndex>
+                  <ZIndex>17</ZIndex>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5635,11 +4834,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                     </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>sDate</rd:DefaultName>
-                  <Top>0.314in</Top>
-                  <Left>5.51298in</Left>
+                  <Top>0.58417in</Top>
+                  <Left>5.54332in</Left>
                   <Height>0.157in</Height>
                   <Width>0.5in</Width>
-                  <ZIndex>23</ZIndex>
+                  <ZIndex>18</ZIndex>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5666,11 +4865,14 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                     </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>sSalesperson</rd:DefaultName>
-                  <Top>0.471in</Top>
-                  <Left>4.81298in</Left>
+                  <Top>0.85642in</Top>
+                  <Left>4.84332in</Left>
                   <Height>0.157in</Height>
                   <Width>1.2in</Width>
-                  <ZIndex>24</ZIndex>
+                  <ZIndex>19</ZIndex>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5695,11 +4897,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                     </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>sBILLTOCaps</rd:DefaultName>
-                  <Top>2.38589in</Top>
+                  <Top>2.3997in</Top>
                   <Left>0.8in</Left>
                   <Height>1.2in</Height>
                   <Width>0.12in</Width>
-                  <ZIndex>25</ZIndex>
+                  <ZIndex>20</ZIndex>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5724,11 +4926,14 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                     </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>sSHIPTOCaps</rd:DefaultName>
-                  <Top>2.38589in</Top>
+                  <Top>2.3997in</Top>
                   <Left>3.9in</Left>
                   <Height>1.1in</Height>
                   <Width>0.12in</Width>
-                  <ZIndex>26</ZIndex>
+                  <ZIndex>21</ZIndex>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5751,11 +4956,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       <Style />
                     </Paragraph>
                   </Paragraphs>
-                  <Top>4.275in</Top>
+                  <Top>4.28881in</Top>
                   <Left>0.1in</Left>
                   <Height>0.2in</Height>
                   <Width>1in</Width>
-                  <ZIndex>27</ZIndex>
+                  <ZIndex>22</ZIndex>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -5782,11 +4987,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                     </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>Textbox4623</rd:DefaultName>
-                  <Top>4.075in</Top>
+                  <Top>4.08881in</Top>
                   <Left>1.1in</Left>
                   <Height>0.2in</Height>
-                  <Width>1.5in</Width>
-                  <ZIndex>28</ZIndex>
+                  <Width>3.03956in</Width>
+                  <ZIndex>23</ZIndex>
                   <Style>
                     <Border>
                       <Style>Solid</Style>
@@ -5834,11 +5039,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                     </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>Textbox13</rd:DefaultName>
-                  <Top>4.075in</Top>
+                  <Top>4.08881in</Top>
                   <Left>0.1in</Left>
                   <Height>0.2in</Height>
                   <Width>1in</Width>
-                  <ZIndex>29</ZIndex>
+                  <ZIndex>24</ZIndex>
                   <Style>
                     <Border>
                       <Style>Solid</Style>
@@ -5886,11 +5091,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                     </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>Textbox13</rd:DefaultName>
-                  <Top>4.475in</Top>
+                  <Top>4.48881in</Top>
                   <Left>0.1in</Left>
                   <Height>0.2in</Height>
                   <Width>1in</Width>
-                  <ZIndex>30</ZIndex>
+                  <ZIndex>25</ZIndex>
                   <Style>
                     <Border>
                       <Style>Solid</Style>
@@ -5938,11 +5143,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                     </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>Textbox17</rd:DefaultName>
-                  <Top>4.475in</Top>
+                  <Top>4.48881in</Top>
                   <Left>1.1in</Left>
                   <Height>0.2in</Height>
-                  <Width>1.5in</Width>
-                  <ZIndex>31</ZIndex>
+                  <Width>3.03956in</Width>
+                  <ZIndex>26</ZIndex>
                   <Style>
                     <Border>
                       <Style>Solid</Style>
@@ -5983,450 +5188,16 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                           </Style>
                         </TextRun>
                       </TextRuns>
-                      <Style />
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                      </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>4.275in</Top>
+                  <Top>4.28881in</Top>
                   <Left>1.1in</Left>
                   <Height>0.2in</Height>
-                  <Width>1.5in</Width>
-                  <ZIndex>32</ZIndex>
-                  <Style>
-                    <Border>
-                      <Style>Solid</Style>
-                    </Border>
-                    <TopBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </TopBorder>
-                    <BottomBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </BottomBorder>
-                    <LeftBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </LeftBorder>
-                    <RightBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </RightBorder>
-                  </Style>
-                </Textbox>
-                <Textbox Name="Textbox24">
-                  <CanGrow>true</CanGrow>
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>=Parameters!sPkgs.Value</Value>
-                          <Style>
-                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                            <FontWeight>Bold</FontWeight>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style>
-                        <TextAlign>Center</TextAlign>
-                      </Style>
-                    </Paragraph>
-                  </Paragraphs>
-                  <rd:DefaultName>Textbox21</rd:DefaultName>
-                  <Top>4.075in</Top>
-                  <Left>2.6in</Left>
-                  <Height>0.2in</Height>
-                  <Width>0.7in</Width>
-                  <ZIndex>33</ZIndex>
-                  <Style>
-                    <Border>
-                      <Style>Solid</Style>
-                    </Border>
-                    <TopBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </TopBorder>
-                    <BottomBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </BottomBorder>
-                    <LeftBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </LeftBorder>
-                    <RightBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </RightBorder>
-                    <BackgroundColor>Silver</BackgroundColor>
-                  </Style>
-                </Textbox>
-                <Textbox Name="inv_pkgs3">
-                  <CanGrow>true</CanGrow>
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>=Code.UpdateVar("inv_co_pkgs", reportitems!inv_pkgs2.value)</Value>
-                          <Style>
-                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                            <Format>n0</Format>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style>
-                        <TextAlign>Right</TextAlign>
-                      </Style>
-                    </Paragraph>
-                  </Paragraphs>
-                  <Top>4.275in</Top>
-                  <Left>2.6in</Left>
-                  <Height>0.2in</Height>
-                  <Width>0.7in</Width>
-                  <ZIndex>34</ZIndex>
-                  <Style>
-                    <Border>
-                      <Style>Solid</Style>
-                    </Border>
-                  </Style>
-                </Textbox>
-                <Textbox Name="Textbox4630">
-                  <CanGrow>true</CanGrow>
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value />
-                          <Style>
-                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                            <FontWeight>Bold</FontWeight>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style>
-                        <TextAlign>Center</TextAlign>
-                      </Style>
-                    </Paragraph>
-                  </Paragraphs>
-                  <rd:DefaultName>Textbox4624</rd:DefaultName>
-                  <Top>4.475in</Top>
-                  <Left>2.6in</Left>
-                  <Height>0.2in</Height>
-                  <Width>0.7in</Width>
-                  <ZIndex>35</ZIndex>
-                  <Style>
-                    <Border>
-                      <Style>Solid</Style>
-                    </Border>
-                    <TopBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </TopBorder>
-                    <BottomBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </BottomBorder>
-                    <LeftBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </LeftBorder>
-                    <RightBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </RightBorder>
-                    <BackgroundColor>Silver</BackgroundColor>
-                  </Style>
-                </Textbox>
-                <Textbox Name="Textbox27">
-                  <CanGrow>true</CanGrow>
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>=Parameters!sPPD.Value</Value>
-                          <Style>
-                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                            <FontWeight>Bold</FontWeight>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style>
-                        <TextAlign>Center</TextAlign>
-                      </Style>
-                    </Paragraph>
-                  </Paragraphs>
-                  <rd:DefaultName>Textbox22</rd:DefaultName>
-                  <Top>4.075in</Top>
-                  <Left>3.3in</Left>
-                  <Height>0.2in</Height>
-                  <Width>0.5in</Width>
-                  <ZIndex>36</ZIndex>
-                  <Style>
-                    <Border>
-                      <Style>Solid</Style>
-                    </Border>
-                    <TopBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </TopBorder>
-                    <BottomBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </BottomBorder>
-                    <LeftBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </LeftBorder>
-                    <RightBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </RightBorder>
-                    <BackgroundColor>Silver</BackgroundColor>
-                  </Style>
-                </Textbox>
-                <Textbox Name="Textbox29">
-                  <CanGrow>true</CanGrow>
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value />
-                          <Style>
-                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                            <FontWeight>Bold</FontWeight>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style>
-                        <TextAlign>Center</TextAlign>
-                      </Style>
-                    </Paragraph>
-                  </Paragraphs>
-                  <rd:DefaultName>Textbox22</rd:DefaultName>
-                  <Top>4.475in</Top>
-                  <Left>3.3in</Left>
-                  <Height>0.2in</Height>
-                  <Width>0.5in</Width>
-                  <ZIndex>37</ZIndex>
-                  <Style>
-                    <Border>
-                      <Style>Solid</Style>
-                    </Border>
-                    <TopBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </TopBorder>
-                    <BottomBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </BottomBorder>
-                    <LeftBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </LeftBorder>
-                    <RightBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </RightBorder>
-                    <BackgroundColor>Silver</BackgroundColor>
-                  </Style>
-                </Textbox>
-                <Textbox Name="inv_prepaid3">
-                  <CanGrow>true</CanGrow>
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>=Code.UpdateVar("inv_co_prepaid", reportitems!inv_prepaid2.value)</Value>
-                          <Style>
-                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style />
-                    </Paragraph>
-                  </Paragraphs>
-                  <Top>4.275in</Top>
-                  <Left>3.3in</Left>
-                  <Height>0.2in</Height>
-                  <Width>0.5in</Width>
-                  <ZIndex>38</ZIndex>
-                  <Style>
-                    <Border>
-                      <Style>Solid</Style>
-                    </Border>
-                    <TopBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </TopBorder>
-                    <BottomBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </BottomBorder>
-                    <LeftBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </LeftBorder>
-                    <RightBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </RightBorder>
-                  </Style>
-                </Textbox>
-                <Textbox Name="Textbox30">
-                  <CanGrow>true</CanGrow>
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>=Parameters!sWeight.Value</Value>
-                          <Style>
-                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                            <FontWeight>Bold</FontWeight>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style>
-                        <TextAlign>Center</TextAlign>
-                      </Style>
-                    </Paragraph>
-                  </Paragraphs>
-                  <rd:DefaultName>Textbox25</rd:DefaultName>
-                  <Top>4.075in</Top>
-                  <Left>3.8in</Left>
-                  <Height>0.2in</Height>
-                  <Width>1in</Width>
-                  <ZIndex>39</ZIndex>
-                  <Style>
-                    <Border>
-                      <Style>Solid</Style>
-                    </Border>
-                    <TopBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </TopBorder>
-                    <BottomBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </BottomBorder>
-                    <LeftBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </LeftBorder>
-                    <RightBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </RightBorder>
-                    <BackgroundColor>Silver</BackgroundColor>
-                  </Style>
-                </Textbox>
-                <Textbox Name="Textbox31">
-                  <CanGrow>true</CanGrow>
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value />
-                          <Style>
-                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                            <FontWeight>Bold</FontWeight>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style>
-                        <TextAlign>Center</TextAlign>
-                      </Style>
-                    </Paragraph>
-                  </Paragraphs>
-                  <rd:DefaultName>Textbox25</rd:DefaultName>
-                  <Top>4.475in</Top>
-                  <Left>3.8in</Left>
-                  <Height>0.2in</Height>
-                  <Width>1in</Width>
-                  <ZIndex>40</ZIndex>
-                  <Style>
-                    <Border>
-                      <Style>Solid</Style>
-                    </Border>
-                    <TopBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </TopBorder>
-                    <BottomBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </BottomBorder>
-                    <LeftBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </LeftBorder>
-                    <RightBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </RightBorder>
-                    <BackgroundColor>Silver</BackgroundColor>
-                  </Style>
-                </Textbox>
-                <Textbox Name="inv_weight3">
-                  <CanGrow>true</CanGrow>
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>=Code.UpdateVar("inv_co_weight", reportitems!inv_weight2.value)</Value>
-                          <Style>
-                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style />
-                    </Paragraph>
-                  </Paragraphs>
-                  <Top>4.275in</Top>
-                  <Left>3.8in</Left>
-                  <Height>0.2in</Height>
-                  <Width>1in</Width>
-                  <ZIndex>41</ZIndex>
+                  <Width>3.03956in</Width>
+                  <ZIndex>27</ZIndex>
                   <Style>
                     <Border>
                       <Style>Solid</Style>
@@ -6473,11 +5244,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                     </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>Textbox9</rd:DefaultName>
-                  <Top>4.075in</Top>
-                  <Left>4.8in</Left>
+                  <Top>4.08881in</Top>
+                  <Left>4.13956in</Left>
                   <Height>0.2in</Height>
-                  <Width>1.5in</Width>
-                  <ZIndex>42</ZIndex>
+                  <Width>2.16044in</Width>
+                  <ZIndex>28</ZIndex>
                   <Style>
                     <Border>
                       <Style>Solid</Style>
@@ -6525,11 +5296,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                     </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>Textbox9</rd:DefaultName>
-                  <Top>4.475in</Top>
-                  <Left>4.8in</Left>
+                  <Top>4.48881in</Top>
+                  <Left>4.13956in</Left>
                   <Height>0.2in</Height>
-                  <Width>1.5in</Width>
-                  <ZIndex>43</ZIndex>
+                  <Width>2.16044in</Width>
+                  <ZIndex>29</ZIndex>
                   <Style>
                     <Border>
                       <Style>Solid</Style>
@@ -6570,14 +5341,16 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                           </Style>
                         </TextRun>
                       </TextRuns>
-                      <Style />
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                      </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>4.275in</Top>
-                  <Left>4.8in</Left>
+                  <Top>4.28881in</Top>
+                  <Left>4.13956in</Left>
                   <Height>0.2in</Height>
-                  <Width>1.5in</Width>
-                  <ZIndex>44</ZIndex>
+                  <Width>2.16044in</Width>
+                  <ZIndex>30</ZIndex>
                   <Style>
                     <Border>
                       <Style>Solid</Style>
@@ -6624,11 +5397,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                     </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>Textbox15</rd:DefaultName>
-                  <Top>4.475in</Top>
+                  <Top>4.48881in</Top>
                   <Left>6.3in</Left>
                   <Height>0.2in</Height>
                   <Width>1.41in</Width>
-                  <ZIndex>45</ZIndex>
+                  <ZIndex>31</ZIndex>
                   <Style>
                     <Border>
                       <Style>Solid</Style>
@@ -6676,11 +5449,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                     </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>Textbox15</rd:DefaultName>
-                  <Top>4.075in</Top>
+                  <Top>4.08881in</Top>
                   <Left>6.3in</Left>
                   <Height>0.2in</Height>
                   <Width>1.4in</Width>
-                  <ZIndex>46</ZIndex>
+                  <ZIndex>32</ZIndex>
                   <Style>
                     <Border>
                       <Style>Solid</Style>
@@ -6724,11 +5497,55 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       <Style />
                     </Paragraph>
                   </Paragraphs>
-                  <Top>4.275in</Top>
+                  <Top>4.28881in</Top>
                   <Left>6.3in</Left>
                   <Height>0.2in</Height>
                   <Width>1.3in</Width>
-                  <ZIndex>47</ZIndex>
+                  <ZIndex>33</ZIndex>
+                  <Style>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                  </Style>
+                </Textbox>
+                <Image Name="SLHeaderLogo">
+                  <Source>External</Source>
+                  <Value>=Parameters!pSLHeaderLogo.Value</Value>
+                  <Sizing>FitProportional</Sizing>
+                  <Top>0.38542in</Top>
+                  <Left>0.03383in</Left>
+                  <Height>0.64in</Height>
+                  <Width>2in</Width>
+                  <ZIndex>34</ZIndex>
+                  <Style>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                  </Style>
+                </Image>
+                <Textbox Name="inv_addr9">
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>=Code.UpdateVar("invoice_addr", ReportItems!inv_addr3.Value)</Value>
+                          <Style>
+                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value), "Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                            <FontWeight>Bold</FontWeight>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style>
+                        <TextAlign>Left</TextAlign>
+                      </Style>
+                    </Paragraph>
+                  </Paragraphs>
+                  <Top>1.06708in</Top>
+                  <Left>0.03383in</Left>
+                  <Height>0.58221in</Height>
+                  <Width>2.7545in</Width>
+                  <ZIndex>35</ZIndex>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -6737,8 +5554,8 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                 </Textbox>
               </ReportItems>
               <KeepTogether>true</KeepTogether>
-              <Height>4.675in</Height>
-              <Width>7.77003in</Width>
+              <Height>4.68881in</Height>
+              <Width>7.79781in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -6753,7 +5570,7 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>1.63542in</Height>
+          <Height>1.91159in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -6883,7 +5700,7 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       <Style />
                     </Paragraph>
                   </Paragraphs>
-                  <Top>1.086in</Top>
+                  <Top>0.92in</Top>
                   <Left>2.1919in</Left>
                   <Height>0.156in</Height>
                   <Width>1.54594in</Width>
@@ -6923,27 +5740,8 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                     <Border>
                       <Style>Solid</Style>
                     </Border>
-                    <TopBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </TopBorder>
-                    <BottomBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </BottomBorder>
-                    <LeftBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </LeftBorder>
-                    <RightBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </RightBorder>
                     <BackgroundColor>Silver</BackgroundColor>
+                    <PaddingRight>2pt</PaddingRight>
                   </Style>
                 </Textbox>
                 <Textbox Name="sMiscCharges2">
@@ -6974,6 +5772,7 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                     <Border>
                       <Style>None</Style>
                     </Border>
+                    <PaddingRight>2pt</PaddingRight>
                   </Style>
                 </Textbox>
                 <Textbox Name="sFreight2">
@@ -7004,6 +5803,7 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                     <Border>
                       <Style>None</Style>
                     </Border>
+                    <PaddingRight>2pt</PaddingRight>
                   </Style>
                 </Textbox>
                 <Textbox Name="sSalesTax3">
@@ -7034,6 +5834,7 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                     <Border>
                       <Style>None</Style>
                     </Border>
+                    <PaddingRight>2pt</PaddingRight>
                   </Style>
                 </Textbox>
                 <Textbox Name="sSalesTax4">
@@ -7064,36 +5865,7 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                     <Border>
                       <Style>None</Style>
                     </Border>
-                  </Style>
-                </Textbox>
-                <Textbox Name="sPrepaidAmount2">
-                  <CanGrow>true</CanGrow>
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>=Parameters!sPrepaidAmount.Value</Value>
-                          <Style>
-                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style>
-                        <TextAlign>Right</TextAlign>
-                      </Style>
-                    </Paragraph>
-                  </Paragraphs>
-                  <rd:DefaultName>sPrepaidAmount</rd:DefaultName>
-                  <Top>0.92in</Top>
-                  <Left>4.92315in</Left>
-                  <Height>0.156in</Height>
-                  <Width>1.39385in</Width>
-                  <ZIndex>10</ZIndex>
-                  <Style>
-                    <Border>
-                      <Style>None</Style>
-                    </Border>
+                    <PaddingRight>2pt</PaddingRight>
                   </Style>
                 </Textbox>
                 <Textbox Name="sTotal2">
@@ -7116,36 +5888,17 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                     </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>sTotal</rd:DefaultName>
-                  <Top>1.1116in</Top>
-                  <Left>4.92315in</Left>
+                  <Top>0.93678in</Top>
+                  <Left>4.95504in</Left>
                   <Height>0.19in</Height>
                   <Width>1.39385in</Width>
-                  <ZIndex>11</ZIndex>
+                  <ZIndex>10</ZIndex>
                   <Style>
                     <Border>
                       <Style>Solid</Style>
                     </Border>
-                    <TopBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </TopBorder>
-                    <BottomBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </BottomBorder>
-                    <LeftBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </LeftBorder>
-                    <RightBorder>
-                      <Color>Black</Color>
-                      <Style>Solid</Style>
-                      <Width>1pt</Width>
-                    </RightBorder>
                     <BackgroundColor>Silver</BackgroundColor>
+                    <PaddingRight>2pt</PaddingRight>
                   </Style>
                 </Textbox>
                 <Textbox Name="sEuroTotal2">
@@ -7168,11 +5921,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                     </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>sEuroTotal</rd:DefaultName>
-                  <Top>1.086in</Top>
+                  <Top>0.92in</Top>
                   <Left>0.62246in</Left>
                   <Height>0.156in</Height>
                   <Width>1.5in</Width>
-                  <ZIndex>12</ZIndex>
+                  <ZIndex>11</ZIndex>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -7199,11 +5952,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       </Style>
                     </Paragraph>
                   </Paragraphs>
-                  <Top>1.1116in</Top>
-                  <Left>6.37315in</Left>
+                  <Top>0.93678in</Top>
+                  <Left>6.41833in</Left>
                   <Height>0.19in</Height>
-                  <Width>1.35167in</Width>
-                  <ZIndex>13</ZIndex>
+                  <Width>1.34068in</Width>
+                  <ZIndex>12</ZIndex>
                   <Style>
                     <Border>
                       <Style>Solid</Style>
@@ -7228,40 +5981,6 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                       <Style>Solid</Style>
                       <Width>1pt</Width>
                     </RightBorder>
-                    <PaddingLeft>2pt</PaddingLeft>
-                    <PaddingRight>2pt</PaddingRight>
-                    <PaddingTop>2pt</PaddingTop>
-                    <PaddingBottom>2pt</PaddingBottom>
-                  </Style>
-                </Textbox>
-                <Textbox Name="inv_prepaid_amt2">
-                  <CanGrow>true</CanGrow>
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>=ReportItems!inv_prepaid_amt.Value</Value>
-                          <Style>
-                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
-                            <Format>n2</Format>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style>
-                        <TextAlign>Right</TextAlign>
-                      </Style>
-                    </Paragraph>
-                  </Paragraphs>
-                  <Top>0.92in</Top>
-                  <Left>6.37315in</Left>
-                  <Height>0.156in</Height>
-                  <Width>1.35167in</Width>
-                  <ZIndex>14</ZIndex>
-                  <Style>
-                    <Border>
-                      <Style>None</Style>
-                    </Border>
                     <PaddingLeft>2pt</PaddingLeft>
                     <PaddingRight>2pt</PaddingRight>
                     <PaddingTop>2pt</PaddingTop>
@@ -7291,7 +6010,10 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                   <Left>6.37315in</Left>
                   <Height>0.156in</Height>
                   <Width>1.35167in</Width>
-                  <ZIndex>15</ZIndex>
+                  <ZIndex>13</ZIndex>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -7325,7 +6047,7 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                   <Left>6.37315in</Left>
                   <Height>0.156in</Height>
                   <Width>1.35167in</Width>
-                  <ZIndex>16</ZIndex>
+                  <ZIndex>14</ZIndex>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -7359,7 +6081,7 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                   <Left>6.37315in</Left>
                   <Height>0.156in</Height>
                   <Width>1.35167in</Width>
-                  <ZIndex>17</ZIndex>
+                  <ZIndex>15</ZIndex>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -7393,7 +6115,7 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                   <Left>6.37315in</Left>
                   <Height>0.156in</Height>
                   <Width>1.35in</Width>
-                  <ZIndex>18</ZIndex>
+                  <ZIndex>16</ZIndex>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -7427,7 +6149,7 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                   <Left>6.37315in</Left>
                   <Height>0.156in</Height>
                   <Width>1.35in</Width>
-                  <ZIndex>19</ZIndex>
+                  <ZIndex>17</ZIndex>
                   <Style>
                     <Border>
                       <Style>Solid</Style>
@@ -7458,10 +6180,39 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
                     <PaddingBottom>2pt</PaddingBottom>
                   </Style>
                 </Textbox>
+                <Textbox Name="Textbox214">
+                  <CanGrow>true</CanGrow>
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>="Page " &amp; Globals!PageNumber &amp; "  " &amp; Parameters!sOf.Value &amp; "  " &amp; Globals!TotalPages</Value>
+                          <Style>
+                            <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                          </Style>
+                        </TextRun>
+                      </TextRuns>
+                      <Style>
+                        <TextAlign>Right</TextAlign>
+                      </Style>
+                    </Paragraph>
+                  </Paragraphs>
+                  <Top>1.26416in</Top>
+                  <Left>6.09896in</Left>
+                  <Height>0.157in</Height>
+                  <Width>1.67107in</Width>
+                  <ZIndex>18</ZIndex>
+                  <Style>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                  </Style>
+                </Textbox>
               </ReportItems>
               <KeepTogether>true</KeepTogether>
-              <Height>1.63542in</Height>
-              <Width>7.77in</Width>
+              <Height>1.91159in</Height>
+              <Width>7.79781in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -7482,7 +6233,6 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
         </PageFooter>
         <LeftMargin>0.25in</LeftMargin>
         <RightMargin>0.2in</RightMargin>
-        <TopMargin>0.3in</TopMargin>
         <BottomMargin>0.05in</BottomMargin>
         <Style />
       </Page>
@@ -8159,6 +6909,11 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
     <ReportParameter Name="pVoidOrDraft">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" />
+        </Values>
+      </DefaultValue>
       <Prompt>p Void Or Draft</Prompt>
     </ReportParameter>
   </ReportParameters>
@@ -8334,6 +7089,6 @@ Parameters!sEuroTotal.Value + ":", Nothing)</Value>
     End Function</Code>
   <Language>=Parameters!pLanguage.Value</Language>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportServerUrl>http://uscowsldb5/ReportServer_SL803</rd:ReportServerUrl>
+  <rd:ReportServerUrl>http://hkpidutls01/ReportServer</rd:ReportServerUrl>
   <rd:ReportID>67924726-af50-40c4-a69e-ddcf1b95001b</rd:ReportID>
 </Report>
