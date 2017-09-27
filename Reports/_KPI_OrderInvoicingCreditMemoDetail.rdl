@@ -3318,7 +3318,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.22917in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -3363,7 +3363,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!SerialLot.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>=IIf(IsNothing(Parameters!pFontDescriptor.Value),"Times New Roman", Parameters!pFontDescriptor.Value)</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -3376,7 +3378,7 @@
                             <Border>
                               <Style>None</Style>
                             </Border>
-                            <VerticalAlign>Bottom</VerticalAlign>
+                            <VerticalAlign>Top</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                           </Style>
                         </Textbox>
@@ -6745,7 +6747,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>Rpt_OrderInvoicingCreditMemoSp</DataSetName>
-            <Height>9.97098in</Height>
+            <Height>9.95015in</Height>
             <Width>7.88676in</Width>
             <Style>
               <Border>

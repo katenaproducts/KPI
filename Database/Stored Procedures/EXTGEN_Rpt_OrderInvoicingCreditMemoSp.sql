@@ -1,394 +1,29 @@
 USE [KPI_App]
 GO
-
-/****** Object:  StoredProcedure [dbo].[EXTGEN_Rpt_OrderInvoicingCreditMemoSp]    Script Date: 08/30/2017 15:48:37 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
 
-
-
-
 /* $Header: /ApplicationDB/Stored Procedures/Rpt_OrderInvoicingCreditMemoSp.sp 117   6/05/15 1:39a Cliu $  */
-/*
-***************************************************************
-*                                                             *
-*                           NOTICE                            *
-*                                                             *
-*   THIS SOFTWARE IS THE PROPERTY OF AND CONTAINS             *
-*   CONFIDENTIAL INFORMATION OF INFOR AND/OR ITS AFFILIATES   *
-*   OR SUBSIDIARIES AND SHALL NOT BE DISCLOSED WITHOUT PRIOR  *
-*   WRITTEN PERMISSION. LICENSED CUSTOMERS MAY COPY AND       *
-*   ADAPT THIS SOFTWARE FOR THEIR OWN USE IN ACCORDANCE WITH  *
-*   THE TERMS OF THEIR SOFTWARE LICENSE AGREEMENT.            *
-*   ALL OTHER RIGHTS RESERVED.                                *
-*                                                             *
-*   (c) COPYRIGHT 2008 INFOR.  ALL RIGHTS RESERVED.           *
-*   THE WORD AND DESIGN MARKS SET FORTH HEREIN ARE            *
-*   TRADEMARKS AND/OR REGISTERED TRADEMARKS OF INFOR          *
-*   AND/OR ITS AFFILIATES AND SUBSIDIARIES. ALL RIGHTS        *
-*   RESERVED.  ALL OTHER TRADEMARKS LISTED HEREIN ARE         *
-*   THE PROPERTY OF THEIR RESPECTIVE OWNERS.                  *
-*                                                             *
-***************************************************************
-*/
-
-/* $Archive: /ApplicationDB/Stored Procedures/Rpt_OrderInvoicingCreditMemoSp.sp $
- *
- * SL9.00 117 195626 Cliu Fri Jun 05 01:39:37 2015
- * conversion populated time stamp in inv_hdr_mst.inv_date field - cannot reprint order invoices
- * Issue:195626
- * Use the ApplyDateOffsetSp function to set the ending invoice date to the timestamp of the end of day.
- *
- * SL9.00 116 193210 Ehe Thu Apr 02 04:39:36 2015
- * Simple and Detail report not displaying new Remit To details
- * 193210 Change the logic to output the new 3 column by the end of sp.
- *
- * SL9.00 115 188008 csun Wed Feb 04 03:56:21 2015
- * Issue#188008
- * RS7090,Add 3 new columns for temp table tt_invoice_draft.
- *
- * SL9.00 114 188748 pgross Tue Dec 16 15:10:29 2014
- * summarize surcharges for each individual invoice
- *
- * SL9.00 113 188433 jzhou Wed Dec 10 03:10:53 2014
- * Print Header On All Pages needs to be implemented for Order Invoicing
- * Issue 188433:
- * Add parameter for the Print Header On All Pages option.
- *
- * SL9.00 112 188527 jzhou Tue Dec 09 04:32:46 2014
- * Issues with formatting of Simple and Detail templates
- * Issue 188527:
- * Use new function to get report address.
- *
- * SL9.00 111 187770 Ehe Mon Dec 01 21:01:03 2014
- * RS7081 Coding
- * 187770 Add due_date for the output field.
- *
- * SL9.00 110 187770 Ehe Thu Nov 27 03:01:39 2014
- * RS7081 Coding
- * 187770 Add input parameters and output fields for RS7081.
- *
- * SL9.00 109 183743 Tding Fri Oct 10 21:52:23 2014
- * Order Invoicing Credit Memo report processing fails with error and report is not attached to the email.  The multi-part identifier "customer.lang_code" could not be bound
- * issue 183743, add an alias for table customer.
- *
- * SL9.00 108 176536 Igui Thu Mar 27 04:21:34 2014
- * New Extended Tax value seems to be pulling from wrong place
- * issue 176536(RS6307)
- * add parameter @ExtendedTax.
- *
- * SL9.00 107 177355 Igui Wed Mar 26 01:46:17 2014
- * Reprot OrderInvoicingCreditMemoLaser lists duplicated Line/Rel info.
- * issue 177355(RS5396)
- * add co_release judgement for select statement.
- *
- * SL9.00 106 171399 Cajones Fri Jan 24 15:19:32 2014
- * Errors found in Store Procedures for Mexico Country Pack
- * Issue 171399
- * Added missing t in @PrinCustomerNotes (@PrintCustomerNotes)
- * Added missing s in @PrintLineNotes (@PrintLinesNotes)
- *
- * SL9.00 105 172506 jzhou Tue Dec 24 00:40:01 2013
- * Changes associated with RS6529 Japan Country Pack - Monthly Invoice
- * Issue 172506:
- * Delete parameter @InvoiceType
- * Delete the logic about @InvoiceType
- *
- * SL9.00 104 171385 Ezi Mon Dec 16 05:02:56 2013
- * Germany Country Pack - Report layout changes
- * Issue 171385 - Germany Country Pack - Report layout changes
- *
- * SL9.00 103 171375 Lchen3 Mon Nov 25 01:57:40 2013
- * Invoice does not show Demanding Site PO number when PO- CO Automation is used
- * issue 171375
- * add field demanding site po
- *
- * SL9.00 102 169816 calagappan Mon Oct 28 10:48:18 2013
- * reprint of edi invoice blank if print invoices not checked in edi profile
- * Use customer document and EDI profiles to determine invoices to print
- *
- * SL8.04 101 165732 Igui Thu Aug 22 04:32:08 2013
- * Item content information line should be set a hidden condition when an item is eligible to make references for item content or not.
- * Issue 165732 - order the select columns and format arguments
- *
- * SL8.04 100 165732 Igui Wed Aug 21 03:21:10 2013
- * Item content information line should be set a hidden condition when an item is eligible to make references for item content or not.
- * Issue 165732 - Add output field item_content (1 = the definition of item contents that provide the basis for the calculation of surcharges included with items that are purchased from vendors and sold to customers.)
- *
- * SL8.04 99 164176 Cajones Wed Jul 03 08:03:16 2013
- * update EXTGEN touchpoints
- * Issue 164176
- * Modified Mexican Localizations code to make it more consistent with SyteLine's External Touch Point Standards
- *
- * SL8.04 98 163380 Mzhang4 Sat Jun 08 04:23:59 2013
- * Surcharge value null was added to invoice amount.
- * 163380- if item has no item content set surcharge to 0.
- *
- * SL8.04 97 RS5136 Mzhang4 Wed May 29 05:53:42 2013
- * RS5136- move the DECLARE to the front of the cades.
- *
- * SL8.04 96 RS5136 Mzhang4 Wed May 29 05:18:07 2013
- * RS5136- if cosurcharge is null set it to 0.
- *
- * SL8.04 95 RS5136 Mzhang4 Wed May 29 03:06:17 2013
- * RS5136-add surcharge to the total.
- *
- * SL8.04 94 RS5136 Mzhang4 Fri May 24 05:03:09 2013
- * RS5136- calc surcharge and total amount.
- *
- * SL8.04 93 160920 Jmtao Tue May 21 05:17:47 2013
- * Unable to reprint invoice from Order Invoicing Credit Memo Form
- * 160920 Change str_co_line to co_line
- *
- * SL8.04 92 160920 Jmtao Wed May 15 23:18:27 2013
- * Unable to reprint invoice from Order Invoicing Credit Memo Form
- * 160920 Change the where clause #tt_invoice_credit_memo.str_co_line = coitem.co_line
- * to 
- * substring(#tt_invoice_credit_memo.str_co_line,0,4 = coitem.co_line
- *
- * SL8.04 91 157844 Ddeng Fri Apr 19 01:31:03 2013
- * Order Invoicing Credit Memo To Be Printed Report not printing.
- * Issue 157844: Add the missing parameter pSite to call Rpt_CoDDraftISp. 
- *
- * SL8.04 90 RS5135 Lliu Mon Mar 18 02:22:16 2013
- * RS5135:Add Promotioncode in sp
- *
- * SL8.04 89 RS2775 exia Mon Feb 25 04:45:21 2013
- * RS2775
- *
- * SL8.04 88 RS4615 Azhang Sun Dec 30 22:04:34 2012
- * RS4615: Multi - Add Site within a Site Functionality.
- *
- * SL8.04 87 156737 calagappan Fri Dec 28 17:31:32 2012
- * Do not reset value of @Mode
- *
- * SL8.04 86 RS4615 Jmtao Thu Dec 27 02:57:07 2012
- * RS4615 (Multi - Add Site within a Site Functionality). change tab with 3 spaces
- *
- * SL8.04 85 RS4615 Jmtao Thu Dec 27 02:25:37 2012
- * RS4615 (Multi - Add Site within a Site Functionality). replace tab with 3 spaces, delete enter at the last of the file
- *
- * SL8.04 82 RS5857 Bbai Fri Oct 26 03:20:43 2012
- * RS5857:
- * Add a InvoiceType parm to control the logic.
- *
- * SL8.04 81 154497 Cajones Tue Oct 23 09:41:25 2012
- * Mexican Localizations for Rpt_OrderInvoicingCreditMemoSp
- * Issue 154497
- * Added touchpoint for Mexican Localizations.
- *
- * SL8.04 80 RS5200 jzhou Fri Aug 24 02:13:11 2012
- * RS5200:
- * Add parameter '@PrintItemOverview'.
- *
- * SL8.04 79 149080 calagappan Thu Jul 05 17:05:50 2012
- * ReUsed Serial Number does not print on invoice
- * Reset invoice and reference numbers after credit memo is generated
- *
- * SL8.03 78 148299 pgross Fri May 04 10:35:30 2012
- * EDI Invoices are printing in error if they are printed with non edi invoices
- * always check to see if an EDI customer uses printed invoices
- *
- * SL8.03 77 143279 calagappan Fri Oct 14 14:27:33 2011
- * Invoice using multiple due dates terms with many due dates, print dates out of order
- * Included multiple due date as part of order by clause
- *
- * SL8.03 76 142132 exia Wed Sep 14 22:58:20 2011
- * The draft option is not printing the invoice totals on the report. ,
- * Issue - 142132
- * Purpose: Merge the CoDraft data into this sp.
- * 1. According to Rpt_CoDDraftISp, serial variables have been defined.
- * 2.Relatve serial columns have been added on #tt_invoice_credit_memo create sql statements.
- * 3.Temp table #tt_invoice_draft has been added.
- * 4.Call Rpt_CoDDraftISp to get data and insert into #tt_invoice_draft.Parameter pVoidOrDraf equals D.
- * 5.According to #tt_invoice_draft, #tt_invoice_credit_memo  has been Updated, two tables' relative column is invoice number.
- * 6.Call Rpt_CoDDraftIsp again, the @pVoidOrDraft equals V
- * 7. Update #tt_invoice_credit_memo except last one record.
- *
- * SL8.03 75 RS4768 Xliang Fri Jun 03 04:52:35 2011
- * rs4768: add "Print Lot Number" print option.
- *
- * SL8.03 74 135328 pgross Fri Dec 17 09:42:35 2010
- * Invoice prints in ï¿½Ship Toï¿?Language.
- * get language code from cust_seq=0
- *
- * SL8.03 73 133785 Cajones Wed Nov 17 13:46:18 2010
- * When printing invoices for the first time, on task parameter, the string shows  RBP, REPRINT.
- * Issue 133785
- * Added code to always set the @Mode to REPRINT
- *
- * SL8.03 72 133874 pgross Fri Oct 29 12:16:03 2010
- * Invoice blank for subsidiary corporate customer.
- * retrieve corporate customer information from the bill-to record instead of the ship-to record
- *
- * SL8.03 71 132999 pgross Tue Oct 12 15:23:38 2010
- * Corp customer language not used on invoices
- * use the language of the corporate customer
- *
- * SL8.02 70 rs4588 Dahn Thu Mar 04 16:31:29 2010
- * rs4588 copyright header changes.
- *
- * SL8.01 69 120657 calagappan Thu Jul 16 13:39:45 2009
- * Serial Numbers not printing sequentially on Invoices
- * Include serial number as criteria to order result set.
- *
- * SL8.01 68 115920 pgross Wed Jan 07 13:44:36 2009
- * When printing a customer order where the ship to address is in a different country on the Order Invoicing Credit Memo form, the invoice printed out has picked up the VAT number of the main invoice address but the country code of the ship to.
- * added Ship To Tax information to the output
- *
- * SL8.01 67 114501 calagappan Fri Nov 07 15:51:46 2008
- * When Customer Doc Profile is setup for Order Invoicing/Credit Memo, only the first invoice in  batch will print.
- * Insert/Delete TrackRows only during posting and printing and not during reprint.
- *
- * SL8.01 66 114054 calagappan Mon Sep 29 17:14:27 2008
- * Tax code labels are not printing properly on the Order Invoicing report.
- * Display tax amount labels from Tax System form.
- *
- * SL8.01 65 113787 hpurayil Fri Sep 12 12:09:42 2008
- * Two BODs are sometimes being created for the same Invoice
- * 113787-No more BOD will be generated when Printing Invoice/Credit Memo/Debit Memo. BOD will be generated only at the time of Invoice Posting.
- *
- * SL8.01 64 rs3953 Vlitmano Tue Aug 26 19:02:15 2008
- * RS3953 - Changed a Copyright header?
- *
- * SL8.01 63 113274 pcoate Tue Aug 26 14:25:49 2008
- * Issue 113274 - Added logic to handle multiple inv_hdr rows for the same invoice.
- *
- * SL8.01 62 rs3953 Vlitmano Mon Aug 18 15:38:53 2008
- * Changed a Copyright header information(RS3959)
- *
- * SL8.01 61 109670 Djackson1 Fri Jul 18 09:19:00 2008
- * Invoice XML not being created
- * 109670 BOD initialization Point Change
- *
- * SL8.01 60 108552 pgross Wed Apr 02 14:35:25 2008
- * Syteline 7 requires that you go to the EDI Customer Profile and check the Print Invoice box when reprinting an invoice. This was not required in Syteline 6.
- * allow reprinting of EDI invoices
- *
- * SL8.01 59 108151 ssalahud Sat Mar 29 09:09:48 2008
- * Some fields on the Order Invoicing Credit Memo Report do not adhere to the number format defined on the Language IDs form
- * Issue 108151
- * Corrected quantity and total amount format.
- *
- * SL8.00 58 105954 pgross Fri Sep 28 10:21:15 2007
- * altered how inv_hdr.bill_type is selected
- *
- * SL8.00 57 104346 hcl-kumarup Thu Aug 16 08:51:51 2007
- * Tax only price adjustment invoice printed without totals.
- * Checked-in for issue 104346
- * Modified the "UPDATE #tt_invoice_credit_memo " statement to get currency format and places of the respective customer in case of ADJUSTMENT type invoice
- *
- * SL8.00 56 103041 hcl-kumarup Thu Jul 05 02:52:23 2007
- * The currency format in Order Invoicing Credit Memo report is domestic currency's format, even though the customer of the CO is set foreign currency
- * Checked-in for issue 103041
- * Updated report table by the currency places and currecny format of the respective customer
- *
- * SL8.00 55 101545 hcl-kumarup Thu May 10 05:59:43 2007
- * Duplicate invoices printed with a set of overlapping languages
- * Checked-in for issue 101545
- * Applied NULL to the variable @CustLangCode on if condition
- *
- * SL8.00 54 RS2968 nkaleel Fri Feb 23 04:59:52 2007
- * changing copyright information(RS2968)
- *
- * SL8.00 53 99489 Hcl-ajain Fri Feb 16 08:24:19 2007
- * Invoice prints blank if order is for a Ship To with a different language code.
- * Issue # 99489
- * Controlled the printing of invoice in case of customer language code is different from bill to customer language code.
- *
- * SL8.00 52 97869 Hcl-jainami Thu Feb 15 14:51:50 2007
- * Invoices are printing for customers when edi customer profile does not have the print invoice turned on.
- * Checked-in for issue 97869:
- * Modified the code to honor the EDI Customer Profile settings while processing ANY CO for a EDI Customer and not just for an EDI CO.
- *
- * SL8.00 51 98954 Hcl-ajain Fri Feb 02 07:11:53 2007
- * Invoices are printed in multiple lanugages if Range of Invoices is printed with languages overlapping.
- * Issue 98954
- * Added the condition for landuage code of customer removed by issue 91738.
- *
- * SL8.00 50 RS3339 nvennapu Thu Jan 18 06:59:40 2007
- *
- * SL8.00 49 95829 Hcl-ajain Fri Aug 25 06:05:56 2006
- * Blank Page prints on Reprint of Invoices for History Customer Orders
- * Issue # 95829
- * 1,Inserted row in final result set table to diaply error on the report that order now no longer exists for this invoice.
- *
- * SL8.00 48 95692 hcl-tiwasun Wed Aug 09 07:42:12 2006
- * The description Tax Invoice does not print on the first page of an invoice.
- * Issue# 95692
- * Update the print_tax_invoice field value for tx_type =1 record also.
- *
- * SL8.00 47 RS2968 prahaladarao.hs Wed Jul 12 01:48:15 2006
- * RS 2968, Name change CopyRight Update.
- *
- * SL8.00 46 RS1164 ajith.nair Wed Jun 28 01:52:07 2006
- * RS1164
- * (1) Added new fields [Kit_Component, Kit_Component_Desc, Kit_Qty_Required, Kit_UM, Kit_Flag] in the existing report set table #tt_invoice_credit_memo for Implementing the Kit Item functionality.
- *
- * SL8.00 45 94783 sarin.s Wed Jun 21 05:41:19 2006
- * GST value and text not printing on invoice
- * 94783
- * If field terms_pct of #tt_invoice_credit_memo table is null then,it's updated to zero.
- *
- * SL8.00 44 94783 sarin.s Wed Jun 21 02:31:36 2006
- * GST value and text not printing on invoice
- * 94783
- * Addded columns tax_disc_allow1 and tax_disc_allow2 to table #tt_invoice_credit_memo.
- * Checked for null of terms_pct field of table #tt_invoice_credit_memo using isnull function.
- *
- * SL8.00 43 92398 hcl-kumarup Thu Feb 16 08:01:24 2006
- * Item based tax system - problems with the Invoice
- * Checked in for Issue #92398
- * Added TermsPct field to report set table
- *
- * SL8.00 40 91818 NThurn Mon Jan 09 10:39:03 2006
- * Inserted standard External Touch Point call.  (RS3177)
- *
- * SL8.00 42 91738 Hcl-chantar Wed Jan 18 04:37:37 2006
- * The language code for the Customer Bill To (cust_seq = 0) should be used for Invoices, Credit Memos, and Debit Memos.
- * Issue 91738:
- * Deleted the language code condition in the select statement. Due to this report was printing blank if customer ship-to has language code other than customer bill-to and ship-to <>0.
- *
- * SL7.05 38 RS2560 Hcl-sharpar Wed Sep 07 07:06:53 2005
- * RS2560
- *
- * SL7.05 37 80051 Hcl-sharpar Wed Aug 10 05:45:01 2005
- * Issue #80051
- *
- * SL7.05 36 88460 Hcl-dixichi Sat Aug 06 09:05:22 2005
- * Invoices are being duplicated at printing
- * Checked-in for issue 88460
- * Corrected the NULL handling for the Language Code for the customer.
- *
- * SL7.05 35 87260 hcl-yadaami Mon May 23 08:14:09 2005
- * Blank invoices are being generated if language code is populated
- * Issue #87260
- * Modified to fetch data when there is no language code specified
-
- * for Ship To = 1.
- *
- * SL7.05 34 87105 Hcl-tayamoh Thu May 19 10:54:58 2005
- * scanning on TrackRows table
- * issue 87105
- *
- * Removed comments from the Dynamic SQL.
- *
- * SL7.05 33 87105 Hcl-tayamoh Wed May 18 14:31:53 2005
- * scanning on TrackRows table
- * Issue 87105
- *
- * SL7.04 32 85101 Grosphi Tue Feb 08 14:13:36 2005
- * Emailing of invoices via setup of Customer Document Profile sends all invoices in invoice run to all customers
- * only process those invoices within the specified range
- *
- * SL7.04 31 85343 Grosphi Tue Feb 01 16:25:04 2005
- * allow for 55 characters in displayed feature string
- *
- * $NoKeywords: $
- */
+/***************************************************************************\
+* TLC Group, Inc. 
+*
+* Author: Laurence Ledford
+*
+* Program Name: dbo.EXTGEN_Rpt_OrderInvoicingCreditMemoSp
+* Program Type: Stored Procedure
+* Initial Program Version: Rpt_OrderInvoicingCreditMemoSp.sp 117
+* Initial Date: 08/01/2016
+*     Comments: Extend Invoice functionality
+*
+* ID		Date		INI	Description
+* ------	----------	---	---------------------------------------- 
+* KPI01		??????????	???	Extend
+* N/A		09/26/2017	LKL	Add KPI ID to prior code changes. Add change log to header.
+* TLCG01	09/26/2017	LKL	Resolve Lot/SN CRLF issue when printing on invoice.
+*
+\***************************************************************************/
 CREATE PROCEDURE [dbo].[EXTGEN_Rpt_OrderInvoicingCreditMemoSp](
    @pSessionIDChar               NVARCHAR(255)   = NULL,
    @InvType                      NCHAR(3)        = 'RBP',       -- Not needed by this program.  Form Order Invoicing/Credit Memo uses it for stored procedure CO10RSp.
@@ -1582,6 +1217,8 @@ end
 close ciCrs
 deallocate ciCrs
 
+-- START - KPI01
+
 -- _KPI - Packing Slip Number
 update #tt_invoice_credit_memo
 set pack_num_1 = pck.pack_num
@@ -1626,7 +1263,10 @@ select
  bc.BarCode,
  case 
 	when isnull(bc.Lot, '')  = '' then '' 
-	else 'Lot: ' + bc.Lot + + char(10) + char(13)
+	-- START - TLCG01
+	--else 'Lot: ' + bc.Lot + + char(10) + char(13) -- TLCG01 - Removed/Replaced with below line
+	else ' Lot: ' + bc.Lot -- TLCG01
+	-- END - TLCG01
  end
  + case 
 	when ISNULL(bc.SerialNum, 'N/A') = 'N/A' then ''
@@ -1670,7 +1310,12 @@ begin
 	  
 	  update
 	   @KPI_PackingInfo
-	   set  SerialLotString  = isnull(SerialLotString, '') + ISNULL(@KPISerialLotString, '') + char(10) + char(13)
+	   -- START - TLCG01
+	   set  SerialLotString  = CASE
+									WHEN (SerialLotString IS NULL OR SerialLotString = '') AND @KPISerialLotString IS NOT NULL THEN @KPISerialLotString
+									WHEN SerialLotString IS NOT NULL AND @KPISerialLotString IS NOT NULL THEN SerialLotString + CHAR(13) + CHAR(10) + @KPISerialLotString
+									ELSE '' END
+		-- END - TLCG01
 	   from @KPI_PackingInfo kpi where 
 			kpi.InvNum = @KPIInvNum and
 			kpi.CoNum = @KPICoNum and
@@ -1711,6 +1356,9 @@ LEFT JOIN bank_hdr on customer.bank_code = bank_hdr.bank_code
 ORDER BY tt.rpt_key, tt.ser_num, tt.Kit_Flag, tt.multi_due_date
 
 COMMIT TRANSACTION
+
+-- END - KPI01
+
 --Added to call Mexican Country Pack program
 --IF OBJECT_ID(N'dbo.ZMX_CFDGenSp') IS NOT NULL
 --BEGIN
@@ -1741,8 +1389,4 @@ EXEC dbo.CloseSessionContextSp @SessionID = @RptSessionID
 
 RETURN @Severity
 
-
-
 GO
-
-
