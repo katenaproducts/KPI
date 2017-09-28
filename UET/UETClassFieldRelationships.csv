@@ -10,6 +10,7 @@ coitem_mst|Uf_LineDisc
 country_mst|Uf_FlagForCE
 custaddr_mst|Uf_FacilityID
 customer_mst|Uf_CustomerCreatedDate
+customer_mst|Uf_FacilityID
 famcode_mst|Uf_AutoCreatedItem
 famcode_mst|Uf_ExcludeForDiscount
 item_mst|Uf_GTIN
