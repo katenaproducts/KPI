@@ -1,0 +1,40 @@
+User Field Name|User Data Type|Data Type|Precision|Decimals|Initial Value|Description
+ssspj_carrier_account||nvarchar|25|  ||
+ssspj_carrier_bill_to||nvarchar|5|  ||
+ssspj_charge|ListYesNoType|tinyint||  |1|
+ssspj_override|ListYesNoType|tinyint||  |0|
+ssspj_pj_processed|ListYesNoType|tinyint||  |0|
+ssspj_pj_sent|ListYesNoType|tinyint||  |1|
+ssspj_pj_shipment|ListYesNoType|tinyint||  |1|
+ssspj_ShipCodeXRef||nvarchar|30|  ||
+ssspj_thirdparty_country||nvarchar|2|  ||
+ssspj_thirdparty_name||nvarchar|60|  ||
+ssspj_thirdparty_zip||nvarchar|10|  ||
+Uf_AllowedToShipFrom||tinyint||  |1|
+Uf_AutoCreatedItem|ItemType|nvarchar|30|  ||
+UF_BackOrder||nvarchar|1|  |N|N for No, Y for Yes
+Uf_BarCode||nvarchar|50|  |N/A|
+Uf_Closed||tinyint||  |0|
+Uf_CloseDateTime||datetime||  ||
+Uf_CoFinalDestination|CountryType|nvarchar|30|  ||Final Destination for Order
+uf_contractid||nvarchar|10|  ||KPI Contract ID
+Uf_CustomerCreatedDate|Date4Type|datetime||  ||Customer Created Date
+Uf_ExcludeAutoItemOnOrder||tinyint||  |0|
+Uf_ExcludeForDiscount||tinyint||  |0|
+Uf_ExpiryDate||nvarchar|10|  ||
+Uf_FacilityID||nvarchar|10|  ||Site Facility ID
+Uf_FlagForCE|FlagNyType|tinyint||  |0|
+Uf_GTIN||nvarchar|20|  ||GTIN Identifier
+Uf_Itm_CEMarked||tinyint||  |0|Item CE Marked?
+Uf_Itm_DateToMarket||datetime||  ||Date item brought to market
+Uf_Itm_ExcludeFromAutoAdd||smallint||  ||Exclude Item from Auto Add Logic
+Uf_Itm_TravelerID||int||  ||Traveler ID
+Uf_KPISeq||tinyint||  |0|
+Uf_LineDisc||decimal|10|2|0|
+Uf_PickListEnabled||tinyint||  |0|
+Uf_QtyOpen||decimal|18|8|0|
+Uf_Reseq||tinyint||  |0|
+Uf_SerialShip||tinyint||  |0|
+Uf_TotalQtyPacked||decimal|18|8|0|
+Uf_TotalQtyShipped||decimal|18|8|0|
+Uf_VendorConfirmed||nvarchar|1|  |N|

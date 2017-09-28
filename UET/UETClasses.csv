@@ -1,0 +1,20 @@
+Class Name|Label|Description
+co_mst|co_mst|Customer Order Additions
+coitem_mst||
+country_mst||
+custaddr_mst|custaddr_mst|Customer Ship-To additions
+customer_mst||Customer Master File
+famcode_mst||Family Code Table
+item_mst|item_mst|Item additions
+itemcust_mst||Customer Contract Master
+itemcustprice_mst||Customer Contract Pricing Details
+loc_mst||
+lot_mst||
+pck_hdr||
+pck_item_mst||
+SSSPJCO|SSSPJCO|SSSPJCO
+SSSPJCustomer|SSSPJCustomer|SSSPJCustomer
+SSSPJFSPckHdr|SSSPJFSPckHdr|SSSPJFSPckHdr
+SSSPJShipcode|SSSPJShipcode|SSSPJShipcode
+SSSPJShipment|SSSPJShipment|SSSPJShipment
+SSSPJSro|SSSPJSro|SSSPJSro

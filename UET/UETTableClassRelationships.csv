@@ -1,0 +1,19 @@
+Table Name|Class Name|Active|Extend All Records|Rule
+co_mst|co_mst|1|1|
+co_mst|SSSPJCO|1|1|
+coitem_mst|coitem_mst|1|1|
+country_mst|country_mst|1|1|
+custaddr_mst|custaddr_mst|1|1|
+customer_mst|customer_mst|1|0|
+customer_mst|SSSPJCustomer|1|1|
+famcode_mst|famcode_mst|1|0|
+fs_pck_hdr_mst|SSSPJFSPckHdr|1|1|
+fs_sro_mst|SSSPJSro|1|1|
+item_mst|item_mst|1|1|
+itemcust_mst|itemcust_mst|1|0|
+itemcustprice_mst|itemcustprice_mst|1|0|
+location_mst|loc_mst|1|1|
+lot_mst|lot_mst|1|1|
+pckitem_mst|pck_item_mst|1|1|
+shipcode_mst|SSSPJShipcode|1|1|
+shipment_mst|SSSPJShipment|1|1|
