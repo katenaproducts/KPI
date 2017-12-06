@@ -32,6 +32,8 @@ Uf_Itm_TravelerID||int||  ||Traveler ID
 Uf_KPISeq||tinyint||  |0|
 Uf_LineDisc||decimal|10|2|0|
 Uf_PickListEnabled||tinyint||  |0|
+Uf_ProblemCode|ProbCodeType|nvarchar|3|  ||Problem Code
+Uf_ProblemCodeDescription|DescriptionType|nvarchar|40|  ||Problem Code Description
 Uf_QtyOpen||decimal|18|8|0|
 Uf_Reseq||tinyint||  |0|
 Uf_SerialShip||tinyint||  |0|

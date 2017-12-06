@@ -15,5 +15,7 @@ itemcustprice_mst|itemcustprice_mst|1|0|
 location_mst|loc_mst|1|1|
 lot_mst|lot_mst|1|1|
 pckitem_mst|pck_item_mst|1|1|
+posm_pos_mst|posm_pos|1|0|
+rmaitem_mst|rmaitem_mst|1|0|
 shipcode_mst|SSSPJShipcode|1|1|
 shipment_mst|SSSPJShipment|1|1|

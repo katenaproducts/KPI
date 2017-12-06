@@ -29,6 +29,9 @@ pck_hdr|Uf_CloseDateTime
 pck_item_mst|Uf_QtyOpen
 pck_item_mst|Uf_TotalQtyPacked
 pck_item_mst|Uf_TotalQtyShipped
+posm_pos|Uf_CoFinalDestination
+rmaitem_mst|Uf_ProblemCode
+rmaitem_mst|Uf_ProblemCodeDescription
 SSSPJCO|ssspj_carrier_account
 SSSPJCO|ssspj_carrier_bill_to
 SSSPJCO|ssspj_charge

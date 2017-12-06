@@ -12,6 +12,8 @@ loc_mst||
 lot_mst||
 pck_hdr||
 pck_item_mst||
+posm_pos||POSM POS Extensions
+rmaitem_mst|RMA Line Items|RMA Line Items
 SSSPJCO|SSSPJCO|SSSPJCO
 SSSPJCustomer|SSSPJCustomer|SSSPJCustomer
 SSSPJFSPckHdr|SSSPJFSPckHdr|SSSPJFSPckHdr
