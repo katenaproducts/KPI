@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ObjectStudioExport Version="060000">
+   <IDODefinitions>
+      <IDODefinition Name="KPI_POSMPos">
+         <ServerName>KPI_POS</ServerName>
+         <RevisionNo>2</RevisionNo>
+         <RevisionDate>2017-12-05T15:42:41</RevisionDate>
+         <Extends>POSMPos</Extends>
+         <ReplaceFlag>1</ReplaceFlag>
+         <Tables />
+         <Methods>
+            <Method Name="KPI_SSSPOSReverseLookUpCLSp" Transactional="YES" Type="CustomLoad">
+               <StoredProcedure>KPI_SSSPOSReverseLookUpCLSp</StoredProcedure>
+               <MethodType>1</MethodType>
+               <Parameters>
+                  <Parameter Name="CashDrawer" Sequence="5">
+                     <DBDataType Length="8" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="CoNum" Sequence="8">
+                     <DBDataType Length="10" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="CustNum" Sequence="1">
+                     <DBDataType Length="7" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="CustSeq" Sequence="2">
+                     <DBDataType Length="10" Scale="0">LONG</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="PartnerID" Sequence="6">
+                     <DBDataType Length="10" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="POSNum" Sequence="4">
+                     <DBDataType Length="10" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="SerNum" Sequence="3">
+                     <DBDataType Length="30" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+                  <Parameter Name="UserName" Sequence="7">
+                     <DBDataType Length="30" Scale="0">VARCHAR</DBDataType>
+                     <INPUT />
+                     <COMDataType>VARIANT</COMDataType>
+                  </Parameter>
+               </Parameters>
+               <ResultSetProperties>
+                  <Property Sequence="1">PosmNum</Property>
+                  <Property Sequence="2">RefNum</Property>
+                  <Property Sequence="3">CustNum</Property>
+                  <Property Sequence="4">CustSeq</Property>
+                  <Property Sequence="5">DerCustomerName</Property>
+                  <Property Sequence="6">SerNum</Property>
+               </ResultSetProperties>
+            </Method>
+         </Methods>
+         <Properties />
+         <Rules />
+      </IDODefinition>
+   </IDODefinitions>
+</ObjectStudioExport>
