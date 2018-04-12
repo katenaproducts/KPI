@@ -1882,7 +1882,7 @@ WI-15-002</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 AND Fields!Uf_Itm_TravelerID.Value &lt;= 5) OR (Fields!Uf_Itm_TravelerID.Value = 8) OR (Fields!Uf_Itm_TravelerID.Value = 9) OR (Fields!Uf_Itm_TravelerID.Value = 11),"N/A","")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 AND Fields!Uf_Itm_TravelerID.Value &lt;= 5) OR (Fields!Uf_Itm_TravelerID.Value = 8) OR (Fields!Uf_Itm_TravelerID.Value = 9) OR (Fields!Uf_Itm_TravelerID.Value = 11) OR (Fields!Uf_Itm_TravelerID.Value = 13),"N/A","")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -1918,7 +1918,7 @@ WI-15-002</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 5) Or (Fields!Uf_Itm_TravelerID.Value = 8) Or (Fields!Uf_Itm_TravelerID.Value = 9) Or (Fields!Uf_Itm_TravelerID.Value = 11), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 5) Or (Fields!Uf_Itm_TravelerID.Value = 8) Or (Fields!Uf_Itm_TravelerID.Value = 9) Or (Fields!Uf_Itm_TravelerID.Value = 11) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -1954,7 +1954,7 @@ WI-15-002</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 5) Or (Fields!Uf_Itm_TravelerID.Value = 8) Or (Fields!Uf_Itm_TravelerID.Value = 9) Or (Fields!Uf_Itm_TravelerID.Value = 11), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 5) Or (Fields!Uf_Itm_TravelerID.Value = 8) Or (Fields!Uf_Itm_TravelerID.Value = 9) Or (Fields!Uf_Itm_TravelerID.Value = 11) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -1990,7 +1990,7 @@ WI-15-002</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 5) Or (Fields!Uf_Itm_TravelerID.Value = 8) Or (Fields!Uf_Itm_TravelerID.Value = 9) Or (Fields!Uf_Itm_TravelerID.Value = 11), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 5) Or (Fields!Uf_Itm_TravelerID.Value = 8) Or (Fields!Uf_Itm_TravelerID.Value = 9) Or (Fields!Uf_Itm_TravelerID.Value = 11) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -2026,7 +2026,7 @@ WI-15-002</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 5) Or (Fields!Uf_Itm_TravelerID.Value = 8) Or (Fields!Uf_Itm_TravelerID.Value = 9) Or (Fields!Uf_Itm_TravelerID.Value = 11), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 5) Or (Fields!Uf_Itm_TravelerID.Value = 8) Or (Fields!Uf_Itm_TravelerID.Value = 9) Or (Fields!Uf_Itm_TravelerID.Value = 11) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -3030,7 +3030,7 @@ WI-15-002</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 10) Or (Fields!Uf_Itm_TravelerID.Value = 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 10) Or (Fields!Uf_Itm_TravelerID.Value = 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -3066,7 +3066,7 @@ WI-15-002</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 10) Or (Fields!Uf_Itm_TravelerID.Value = 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 10) Or (Fields!Uf_Itm_TravelerID.Value = 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -3102,7 +3102,7 @@ WI-15-002</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 10) Or (Fields!Uf_Itm_TravelerID.Value = 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 10) Or (Fields!Uf_Itm_TravelerID.Value = 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -3138,7 +3138,7 @@ WI-15-002</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 10) Or (Fields!Uf_Itm_TravelerID.Value = 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 10) Or (Fields!Uf_Itm_TravelerID.Value = 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -3174,7 +3174,7 @@ WI-15-002</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 10) Or (Fields!Uf_Itm_TravelerID.Value = 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 10) Or (Fields!Uf_Itm_TravelerID.Value = 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -3412,7 +3412,7 @@ Inspection</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 10) Or (Fields!Uf_Itm_TravelerID.Value = 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 10) Or (Fields!Uf_Itm_TravelerID.Value = 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -3448,7 +3448,7 @@ Inspection</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 10) Or (Fields!Uf_Itm_TravelerID.Value = 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 10) Or (Fields!Uf_Itm_TravelerID.Value = 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -3484,7 +3484,7 @@ Inspection</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 10) Or (Fields!Uf_Itm_TravelerID.Value = 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 10) Or (Fields!Uf_Itm_TravelerID.Value = 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -3520,7 +3520,7 @@ Inspection</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 10) Or (Fields!Uf_Itm_TravelerID.Value = 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 10) Or (Fields!Uf_Itm_TravelerID.Value = 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -3556,7 +3556,7 @@ Inspection</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 10) Or (Fields!Uf_Itm_TravelerID.Value = 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 10) Or (Fields!Uf_Itm_TravelerID.Value = 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -3794,7 +3794,7 @@ WI-09-002</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 3 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 1) OR (Fields!Uf_Itm_TravelerID.Value &gt;= 9 And Fields!Uf_Itm_TravelerID.Value &lt;= 11) Or (Fields!Uf_Itm_TravelerID.Value = 12) , "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 3 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 1) OR (Fields!Uf_Itm_TravelerID.Value &gt;= 9 And Fields!Uf_Itm_TravelerID.Value &lt;= 11) Or (Fields!Uf_Itm_TravelerID.Value = 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -3830,7 +3830,7 @@ WI-09-002</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 3 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 1) OR (Fields!Uf_Itm_TravelerID.Value &gt;= 9 And Fields!Uf_Itm_TravelerID.Value &lt;= 11) Or (Fields!Uf_Itm_TravelerID.Value = 12) , "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 3 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 1) OR (Fields!Uf_Itm_TravelerID.Value &gt;= 9 And Fields!Uf_Itm_TravelerID.Value &lt;= 11) Or (Fields!Uf_Itm_TravelerID.Value = 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -3866,7 +3866,7 @@ WI-09-002</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 3 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 1) OR (Fields!Uf_Itm_TravelerID.Value &gt;= 9 And Fields!Uf_Itm_TravelerID.Value &lt;= 11) Or (Fields!Uf_Itm_TravelerID.Value = 12) , "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 3 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 1) OR (Fields!Uf_Itm_TravelerID.Value &gt;= 9 And Fields!Uf_Itm_TravelerID.Value &lt;= 11) Or (Fields!Uf_Itm_TravelerID.Value = 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -3902,7 +3902,7 @@ WI-09-002</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 3 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 1) OR (Fields!Uf_Itm_TravelerID.Value &gt;= 9 And Fields!Uf_Itm_TravelerID.Value &lt;= 11) Or (Fields!Uf_Itm_TravelerID.Value = 12) , "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 3 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 1) OR (Fields!Uf_Itm_TravelerID.Value &gt;= 9 And Fields!Uf_Itm_TravelerID.Value &lt;= 11) Or (Fields!Uf_Itm_TravelerID.Value = 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -3938,7 +3938,7 @@ WI-09-002</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 3 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 1) OR (Fields!Uf_Itm_TravelerID.Value &gt;= 9 And Fields!Uf_Itm_TravelerID.Value &lt;= 11) Or (Fields!Uf_Itm_TravelerID.Value = 12) , "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 3 And Fields!Uf_Itm_TravelerID.Value &lt;= 7) Or (Fields!Uf_Itm_TravelerID.Value = 1) OR (Fields!Uf_Itm_TravelerID.Value &gt;= 9 And Fields!Uf_Itm_TravelerID.Value &lt;= 11) Or (Fields!Uf_Itm_TravelerID.Value = 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -4176,7 +4176,7 @@ WI-09-010</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 2) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 5 And Fields!Uf_Itm_TravelerID.Value &lt;= 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 2) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 5 And Fields!Uf_Itm_TravelerID.Value &lt;= 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -4212,7 +4212,7 @@ WI-09-010</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 2) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 5 And Fields!Uf_Itm_TravelerID.Value &lt;= 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 2) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 5 And Fields!Uf_Itm_TravelerID.Value &lt;= 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -4248,7 +4248,7 @@ WI-09-010</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 2) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 5 And Fields!Uf_Itm_TravelerID.Value &lt;= 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 2) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 5 And Fields!Uf_Itm_TravelerID.Value &lt;= 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -4284,7 +4284,7 @@ WI-09-010</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 2) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 5 And Fields!Uf_Itm_TravelerID.Value &lt;= 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 2) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 5 And Fields!Uf_Itm_TravelerID.Value &lt;= 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -4320,7 +4320,7 @@ WI-09-010</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 2) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 5 And Fields!Uf_Itm_TravelerID.Value &lt;= 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 2) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 5 And Fields!Uf_Itm_TravelerID.Value &lt;= 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -4557,7 +4557,7 @@ WI-09-010</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 4) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 6 And Fields!Uf_Itm_TravelerID.Value &lt;= 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 4) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 6 And Fields!Uf_Itm_TravelerID.Value &lt;= 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -4593,7 +4593,7 @@ WI-09-010</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 4) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 6 And Fields!Uf_Itm_TravelerID.Value &lt;= 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 4) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 6 And Fields!Uf_Itm_TravelerID.Value &lt;= 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -4629,7 +4629,7 @@ WI-09-010</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 4) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 6 And Fields!Uf_Itm_TravelerID.Value &lt;= 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 4) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 6 And Fields!Uf_Itm_TravelerID.Value &lt;= 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -4665,7 +4665,7 @@ WI-09-010</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 4) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 6 And Fields!Uf_Itm_TravelerID.Value &lt;= 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 4) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 6 And Fields!Uf_Itm_TravelerID.Value &lt;= 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -4701,7 +4701,7 @@ WI-09-010</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 4) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 6 And Fields!Uf_Itm_TravelerID.Value &lt;= 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 4) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 6 And Fields!Uf_Itm_TravelerID.Value &lt;= 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -4939,7 +4939,7 @@ Silicone Tubing</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 3) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 5 And Fields!Uf_Itm_TravelerID.Value &lt;= 10) Or (Fields!Uf_Itm_TravelerID.Value = 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 3) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 5 And Fields!Uf_Itm_TravelerID.Value &lt;= 10) Or (Fields!Uf_Itm_TravelerID.Value = 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -4975,7 +4975,7 @@ Silicone Tubing</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 3) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 5 And Fields!Uf_Itm_TravelerID.Value &lt;= 10) Or (Fields!Uf_Itm_TravelerID.Value = 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 3) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 5 And Fields!Uf_Itm_TravelerID.Value &lt;= 10) Or (Fields!Uf_Itm_TravelerID.Value = 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -5011,7 +5011,7 @@ Silicone Tubing</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 3) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 5 And Fields!Uf_Itm_TravelerID.Value &lt;= 10) Or (Fields!Uf_Itm_TravelerID.Value = 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 3) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 5 And Fields!Uf_Itm_TravelerID.Value &lt;= 10) Or (Fields!Uf_Itm_TravelerID.Value = 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -5047,7 +5047,7 @@ Silicone Tubing</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 3) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 5 And Fields!Uf_Itm_TravelerID.Value &lt;= 10) Or (Fields!Uf_Itm_TravelerID.Value = 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 3) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 5 And Fields!Uf_Itm_TravelerID.Value &lt;= 10) Or (Fields!Uf_Itm_TravelerID.Value = 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -5083,7 +5083,7 @@ Silicone Tubing</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 3) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 5 And Fields!Uf_Itm_TravelerID.Value &lt;= 10) Or (Fields!Uf_Itm_TravelerID.Value = 12), "N/A", "")</Value>
+                                  <Value>=Iif((Fields!Uf_Itm_TravelerID.Value &gt;= 1 And Fields!Uf_Itm_TravelerID.Value &lt;= 3) Or (Fields!Uf_Itm_TravelerID.Value &gt;= 5 And Fields!Uf_Itm_TravelerID.Value &lt;= 10) Or (Fields!Uf_Itm_TravelerID.Value = 12) OR (Fields!Uf_Itm_TravelerID.Value = 13), "N/A", "")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontSize>11pt</FontSize>
@@ -5108,6 +5108,7 @@ Silicone Tubing</Value>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
