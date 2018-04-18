@@ -2550,7 +2550,7 @@ Insp Guide Sht</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Shp</Value>
+                                  <Value>=IIf(Fields!Uf_Itm_TravelerID.Value &lt; 13, "Shp", "Pkg")</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                   </Style>
@@ -2582,8 +2582,7 @@ Insp Guide Sht</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Secondary Op
-(Outsourced)</Value>
+                                  <Value>=IIf(Fields!Uf_Itm_TravelerID.Value &lt; 13, "Secondary Op (Outsourced)", "Ultrasonic Clean")</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                   </Style>
@@ -2615,7 +2614,7 @@ Insp Guide Sht</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>OP-06-002</Value>
+                                  <Value>=IIf(Fields!Uf_Itm_TravelerID.Value &lt; 13, "OP-06-002", "WI-09-003")</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                   </Style>
@@ -5108,7 +5107,6 @@ Silicone Tubing</Value>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -6176,37 +6174,6 @@ Release to Stock</Value>
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Textbox Name="Textbox5">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>="Revision 1  07/05/2017"</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox5</rd:DefaultName>
-              <Left>2.44667in</Left>
-              <Height>0.25in</Height>
-              <Width>1.37291in</Width>
-              <ZIndex>1</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
             <Textbox Name="Uf_Itm_TravelerID">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -6214,7 +6181,7 @@ Release to Stock</Value>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>="PCT001-0" &amp; ReportItems!TravelerID.Value</Value>
+                      <Value>="PCT001-13 Revision 0 3/27/18"</Value>
                       <Style />
                     </TextRun>
                   </TextRuns>
@@ -6224,8 +6191,8 @@ Release to Stock</Value>
               <rd:DefaultName>Uf_Itm_TravelerID</rd:DefaultName>
               <Left>0.69319in</Left>
               <Height>0.25in</Height>
-              <Width>1in</Width>
-              <ZIndex>2</ZIndex>
+              <Width>3.41141in</Width>
+              <ZIndex>1</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
